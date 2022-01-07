@@ -41,6 +41,7 @@ public class CharacterControll : MonoBehaviour
         anim_player = GetComponent<Animator>();
         sprt = GetComponent<SpriteRenderer>();
         part = GetComponent<ParticleSystem>();
+        hitbox.enabled = false;
     }
 
     // Update is called once per frame
