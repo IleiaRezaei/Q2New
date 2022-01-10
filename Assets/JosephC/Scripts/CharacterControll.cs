@@ -104,13 +104,15 @@ public class CharacterControll : MonoBehaviour
         }
         if (Dashing == false)
         {
-            if (CanDash == false)
+
+                if (CanDash == false)
             {
                 dashtimer -= Time.deltaTime;
                 print(dashtimer);
             }
             if (dashtimer <= 0)
             {
+
                 CanDash = true;
                 Color col = new Color(1, 1, 1, 1);
                 sprt.color = col;
@@ -118,13 +120,16 @@ public class CharacterControll : MonoBehaviour
         }
         else
         {
-            anim_player.Play("Dash");
-            dashtimer -= Time.deltaTime;
-            if (dashtimer <= 0)
+            if (attacking == false)
             {
-                Dashing = false;
+                anim_player.Play("dash");
+                dashtimer -= Time.deltaTime;
+                if (dashtimer <= 0)
+                {
+                    Dashing = false;
 
-                dashtimer = 0.5F;
+                    dashtimer = 0.5F;
+                }
             }
         }
         if (attacking == false && Dashing == false)
@@ -148,7 +153,7 @@ public class CharacterControll : MonoBehaviour
             sprt.flipX = true;
             hitbox.offset = new Vector2(-0.5F, hitbox.offset.y);
         }
-        if (Input.GetButtonDown("Jump") && CanDash)
+        if (Input.GetButtonDown("Jump") && CanDash && attacking == false)
         {
             Color col = new Color(0.8F, 0.8F, 0.8F, 0.8F);
             sprt.color = col;
