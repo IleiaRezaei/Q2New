@@ -20,7 +20,7 @@ public class PotatoEnemy : MonoBehaviour
 
     public Transform target;
 
-    private CapsuleCollider2D hitbox;
+    public CapsuleCollider2D hitbox;
 
     public Vector2 knock;
 
@@ -28,7 +28,7 @@ public class PotatoEnemy : MonoBehaviour
     void Start()
     {
         
-        //spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         
         //spriteRenderer.sprite = sprite2;
         
@@ -56,11 +56,11 @@ public class PotatoEnemy : MonoBehaviour
             //anim_potato.Play("GPWalk");
 
         }
-        if(directionBetween.x > 0)
+        if(directionBetween.x < 0)
         {
             spriteRenderer.flipX = true;
         }
-        if (directionBetween.x < 0)
+        if (directionBetween.x > 0)
         {
             spriteRenderer.flipX = false;
         }
