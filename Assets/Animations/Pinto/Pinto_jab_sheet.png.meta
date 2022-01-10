@@ -177,9 +177,9 @@ TextureImporter:
       name: Pinto_jab_sheet_2
       rect:
         serializedVersion: 2
-        x: 340
+        x: 341
         y: 0
-        width: 170
+        width: 169
         height: 230
       alignment: 9
       pivot: {x: 0.33, y: 0.5}

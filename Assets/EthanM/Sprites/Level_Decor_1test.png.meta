@@ -157,9 +157,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 409.6
-        width: 102.4
-        height: 102.4
+        y: 408
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,9 +178,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 102
-        y: 409.6
-        width: 102.4
-        height: 102.4
+        y: 408
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,9 +199,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 204
-        y: 409.6
-        width: 102.4
-        height: 102.4
+        y: 408
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,9 +220,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 306
-        y: 409.6
-        width: 102.4
-        height: 102.4
+        y: 408
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,9 +241,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 408
-        y: 409.6
-        width: 102.4
-        height: 102.4
+        y: 408
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,9 +262,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 307.6
-        width: 102.4
-        height: 102.4
+        y: 304
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,9 +283,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 102
-        y: 307.6
-        width: 102.4
-        height: 102.4
+        y: 304
+        width: 102
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,69 +295,6 @@ TextureImporter:
       bones: []
       spriteID: 8530a8950f5f82d60800000000000000
       internalID: 7865807161845744472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level_Decor_1test_7
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 307.6
-        width: 102.4
-        height: 102.4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c369bc28711ce6a50800000000000000
-      internalID: 6516358017574475324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level_Decor_1test_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 205.6
-        width: 102.4
-        height: 102.4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1082cabb696e46080800000000000000
-      internalID: -9194971004115605503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level_Decor_1test_9
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 205.6
-        width: 102.4
-        height: 102.4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8796caa27690c5f0800000000000000
-      internalID: -738424919653181553
       vertices: []
       indices: 
       edges: []
