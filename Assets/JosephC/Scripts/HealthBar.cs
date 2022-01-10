@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(cam.transform.position.x - 4.25F, 5.2F, -8);
+        transform.position = new Vector3(cam.transform.position.x - 3.80F, 5, -8);
         hp = player.GetComponent<CharacterControll>().currentHP;
         float x;
         x = (hp - 100) /25;

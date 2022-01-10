@@ -11,7 +11,8 @@ public class CharacterControll : MonoBehaviour
     private Animator anim_player;
     public bool attacking = false;
     private bool Dashing = false;
-
+    private GameObject heldobj;
+    private bool holding = false;
 
     public int maxHP = 100;
     public int currentHP = 100;
@@ -71,7 +72,14 @@ public class CharacterControll : MonoBehaviour
                 }
 
                 Direction = new Vector2(movex, movey);
-                anim_player.Play("Walk");
+                if (holding)
+                {
+
+                }
+                else
+                {
+                    anim_player.Play("Walk");
+                }
             }
             else
             {
@@ -83,7 +91,14 @@ public class CharacterControll : MonoBehaviour
             part.Stop(true);
             if (attacking == false && Dashing == false)
             {
-                anim_player.Play("Idle");
+                if (holding)
+                {
+
+                }
+                else
+                {
+                    anim_player.Play("Idle");
+                }
             }
 
         }
