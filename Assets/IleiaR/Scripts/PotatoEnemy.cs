@@ -8,6 +8,10 @@ public class PotatoEnemy : MonoBehaviour
     //public Sprite sprite1;
     //public Sprite sprite2;
 
+    public GameObject me;
+    public GameObject player; 
+
+    private Vector3 directionBetween; 
 
     private SpriteRenderer spriteRenderer;
 
@@ -33,12 +37,13 @@ public class PotatoEnemy : MonoBehaviour
 
         isAttacking = false;
         hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        directionBetween = me.transform.position - player.transform.position;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -51,8 +56,15 @@ public class PotatoEnemy : MonoBehaviour
             //anim_potato.Play("GPWalk");
 
         }
+        if(directionBetween.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (directionBetween.x < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
 
-        
     }
 
     //void ChangeColor()
