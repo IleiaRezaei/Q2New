@@ -16,6 +16,9 @@ public class PotatoEnemy : MonoBehaviour
 
     public Transform target;
 
+    private CapsuleCollider2D hitbox;
+
+    public Vector2 knock;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,7 @@ public class PotatoEnemy : MonoBehaviour
         anim_potato = GetComponent<Animator>();
 
         isAttacking = false;
+        hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
 
     }
 
@@ -73,6 +77,7 @@ public class PotatoEnemy : MonoBehaviour
 
             anim_potato.SetBool("isAttacking", true);
 
+            hitbox.enabled = true;
         }
         else        
         {
@@ -92,6 +97,8 @@ public class PotatoEnemy : MonoBehaviour
         anim_potato.SetBool("animationHasStopped", true);
 
         Debug.Log("==========================================");
+
+        hitbox.enabled = false;
 
     }
 

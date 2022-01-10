@@ -13,12 +13,15 @@ public class Enemy : MonoBehaviour
 
     private SpriteRenderer sprt;
 
+    private CapsuleCollider2D hitbox;
+
 
     // Start is called before the first frame update
     void Start()    
     {
         rb = GetComponent<Rigidbody2D>();
         sprt = GetComponent<SpriteRenderer>();
+        hitbox = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
 
     }
 
