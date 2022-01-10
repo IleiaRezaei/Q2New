@@ -85,6 +85,7 @@ public class PotatoEnemy : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        isAttacking = false;
         Debug.Log("notAttacking");
         anim_potato.SetBool("isAttacking", false);
 
