@@ -30,4 +30,15 @@ public class NPC : MonoBehaviour
     {
         partic.Stop();
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerAttack")
+        {
+            if(collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding != true)
+            {
+                collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().heldobj = this.gameObject;
+                collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding = true;
+            }
+        }
+    }
 }

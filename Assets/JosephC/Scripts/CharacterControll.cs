@@ -2,7 +2,7 @@
 
 public class CharacterControll : MonoBehaviour
 {
-    private float MoveSpeed = 5000;
+    public float MoveSpeed = 5000;
     private float MaxSpeed = 5000;
     private Rigidbody2D RigidBoy;
     private CircleCollider2D Coli;
@@ -50,6 +50,11 @@ public class CharacterControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(heldobj != null)
+        {
+            heldobj.GetComponent<CircleCollider2D>().enabled = false;
+            heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        }
         if (currentHP == 0)
         {
             Destroy(this);
@@ -105,7 +110,7 @@ public class CharacterControll : MonoBehaviour
                 {
                     if (holding)
                     {
-
+                        anim_player.Play("IdleHold");
                     }
                     else
                     {
@@ -181,8 +186,12 @@ public class CharacterControll : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
                     {
-                        heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 20;
+                        heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 69;
+                        heldobj.GetComponent<Rigidbody2D>().angularVelocity = 3600;
+                        heldobj.GetComponent<CircleCollider2D>().enabled = true;
                         heldobj = null;
+                        holding = false;
+                        
                     }
                 }
                 else
