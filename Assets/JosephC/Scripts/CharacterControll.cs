@@ -11,8 +11,8 @@ public class CharacterControll : MonoBehaviour
     private Animator anim_player;
     public bool attacking = false;
     private bool Dashing = false;
-    private GameObject heldobj;
-    private bool holding = false;
+    public GameObject heldobj;
+    public bool holding = false;
 
     public int maxHP = 100;
     public int currentHP = 100;
@@ -177,15 +177,26 @@ public class CharacterControll : MonoBehaviour
             }
             if (attacking == false && Dashing == false)
             {
-                if (Input.GetButtonDown("Light"))
+                if (holding)
                 {
-                    damage = attack(false);
-                    anim_player.Play("LightAtk");
+                    if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
+                    {
+                        heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 20;
+                        heldobj = null;
+                    }
                 }
-                if (Input.GetButtonDown("Heavy"))
+                else
                 {
-                    damage = attack(true);
-                    anim_player.Play("HeavyAtk");
+                    if (Input.GetButtonDown("Light"))
+                    {
+                        damage = attack(false);
+                        anim_player.Play("LightAtk");
+                    }
+                    if (Input.GetButtonDown("Heavy"))
+                    {
+                        damage = attack(true);
+                        anim_player.Play("HeavyAtk");
+                    }
                 }
             }
             if (intercast.collider != null && intercast.collider.tag != "Player")
@@ -244,7 +255,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print(collision);
                 currentHP -= 20;
-                OnKnock(collision.GetComponent<PotatoEnemy>().knock);
+    
 
             }
         }
