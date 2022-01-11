@@ -21,13 +21,16 @@ public class PotatoEnemy : MonoBehaviour
     public Transform target;
 
     public CapsuleCollider2D hitbox;
+    public Rigidbody2D RigidBoy;
+
 
     public Vector2 knock;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        RigidBoy = GetComponent<Rigidbody2D>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         
         //spriteRenderer.sprite = sprite2;
@@ -45,7 +48,7 @@ public class PotatoEnemy : MonoBehaviour
     {
         directionBetween = me.transform.position - player.transform.position;
 
-        knock = directionBetween.normalized * 2:
+        knock = directionBetween.normalized * -5000;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -93,7 +96,10 @@ public class PotatoEnemy : MonoBehaviour
 
             hitbox.enabled = true;
 
-            collision.gameObject.getComponent<CharacterControll>().k = knock;
+            collision.gameObject.GetComponent<CharacterControll>().k = knock;
+
+            RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
+
         }
         else        
         {
@@ -115,8 +121,10 @@ public class PotatoEnemy : MonoBehaviour
         Debug.Log("==========================================");
 
         hitbox.enabled = false;
-
-        knock
     }
 
+    public void OnKnock(Vector2 knock)
+    {
+        //hi
+    }
 }
