@@ -13,6 +13,7 @@ public class CharacterControll : MonoBehaviour
     private bool Dashing = false;
     public GameObject heldobj;
     public bool holding = false;
+    private Vector2 k;
 
     public int maxHP = 100;
     public int currentHP = 100;
@@ -264,7 +265,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print(collision);
                 currentHP -= 20;
-    
+            
 
             }
         }

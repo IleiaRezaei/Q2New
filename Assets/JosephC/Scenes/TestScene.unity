@@ -467,6 +467,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: textbox
       objectReference: {fileID: 0}
+    - target: {fileID: 7091287231294074251, guid: 53b44b674d4df894eb5b408c975f7604,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 58.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091287231294074251, guid: 53b44b674d4df894eb5b408c975f7604,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.099976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b44b674d4df894eb5b408c975f7604, type: 3}
 --- !u!224 &677164442 stripped
@@ -692,6 +702,16 @@ PrefabInstance:
       propertyPath: texbox
       value: 
       objectReference: {fileID: 1165777118}
+    - target: {fileID: 7796969123715700273, guid: 79feaf24109e9084dba6ea3657171dd7,
+        type: 3}
+      propertyPath: holding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796969123715700273, guid: 79feaf24109e9084dba6ea3657171dd7,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 20000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79feaf24109e9084dba6ea3657171dd7, type: 3}
 --- !u!4 &1075260708 stripped
@@ -977,6 +997,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9496a18ba7a681146a88aa539097d5dc,
         type: 3}
+    - target: {fileID: 717671946261346870, guid: 84ab2c0a14d473444be267270ac77a7e,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 717671946261346870, guid: 84ab2c0a14d473444be267270ac77a7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 717671946261346870, guid: 84ab2c0a14d473444be267270ac77a7e,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 717671946261346873, guid: 84ab2c0a14d473444be267270ac77a7e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1094,6 +1129,11 @@ PrefabInstance:
     - target: {fileID: 8325147728831252404, guid: ab4daec1697030b4baa672fda5440342,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325147728831252409, guid: ab4daec1697030b4baa672fda5440342,
+        type: 3}
+      propertyPath: m_LinearDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8325147728831252410, guid: ab4daec1697030b4baa672fda5440342,
