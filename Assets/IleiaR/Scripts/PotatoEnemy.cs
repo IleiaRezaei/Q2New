@@ -89,27 +89,26 @@ public class PotatoEnemy : MonoBehaviour
         //Debug.Log(":::::::::::::::::::::" + collision.gameObject.tag);
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("isAttacking");
+            Debug.Log("++++++++++++++++++++++++++++isAttacking++++++++++++++++++++++++++++");
             isAttacking = true;
 
             anim_potato.SetBool("isAttacking", true);
 
             hitbox.enabled = true;
-
-            collision.gameObject.GetComponent<CharacterControll>().k = knock;
-
-            RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
-
         }
-        else        
+        if(collision.gameObject.tag == "PlayerAttack")
         {
-            //Debug.Log("notAttacking");
-            //anim_potato.SetBool("isAttacking", false);
+            isAttacking = false;
 
+            Debug.Log("----------------------------isGettingAttacked----------------------------");
+
+            //collision.gameObject.GetComponent<CharacterControll>().k = knock;
+            RigidBoy.AddForce(player.GetComponent<CharacterControll>().Direction * player.GetComponent<CharacterControll>().knockback);
+            //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
         }
     }
 
-
+    
     void OnTriggerExit2D(Collider2D collision)
     {
         isAttacking = false;
