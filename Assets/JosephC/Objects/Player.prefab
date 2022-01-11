@@ -101,7 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7315c2b8da3168442bebfc6b363c70fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveSpeed: 5000
   attacking: 0
+  heldobj: {fileID: 0}
+  holding: 0
   maxHP: 100
   currentHP: 100
   damage: 0
@@ -4955,12 +4958,12 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8117477447111467746}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
-  m_Size: {x: 1.1882867, y: 2.4500313}
+  m_Offset: {x: 0.9252081, y: 0}
+  m_Size: {x: 2.038703, y: 2.4500313}
   m_Direction: 0

@@ -163,13 +163,13 @@ public class CharacterControll : MonoBehaviour
             }
             if (Direction.x > 0)
             {
-                hitbox.offset = new Vector2(0.5F, hitbox.offset.y);
+                hitbox.offset = new Vector2(0.9252081F, hitbox.offset.y);
                 sprt.flipX = false;
             }
             if (Direction.x < 0)
             {
                 sprt.flipX = true;
-                hitbox.offset = new Vector2(-0.5F, hitbox.offset.y);
+                hitbox.offset = new Vector2(-0.9252081F, hitbox.offset.y);
             }
             if (Input.GetButtonDown("Jump") && CanDash && attacking == false)
             {
@@ -233,7 +233,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print("heavy");
                 attacking = true;
-                knockback = Direction * 350;
+                knockback = Direction * 3500;
                 return 69;
 
             }
@@ -242,7 +242,7 @@ public class CharacterControll : MonoBehaviour
                 print("light");
                 hitbox.enabled = true;
                 attacking = true;
-                knockback = Direction * 200;
+                knockback = Direction * 2000;
                 return 40;
 
             }
