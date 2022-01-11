@@ -44,6 +44,8 @@ public class PotatoEnemy : MonoBehaviour
     void Update()
     {
         directionBetween = me.transform.position - player.transform.position;
+
+        knock = directionBetween.normalized * 2:
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -90,6 +92,8 @@ public class PotatoEnemy : MonoBehaviour
             anim_potato.SetBool("isAttacking", true);
 
             hitbox.enabled = true;
+
+            collision.gameObject.getComponent<CharacterControll>().k = knock;
         }
         else        
         {
@@ -112,6 +116,7 @@ public class PotatoEnemy : MonoBehaviour
 
         hitbox.enabled = false;
 
+        knock
     }
 
 }
