@@ -93,7 +93,7 @@ public class PotatoEnemy : MonoBehaviour
 
             hitbox.enabled = true;
 
-            collision.gameObject.getComponent<CharacterControll>().knockback = knock;
+            collision.gameObject.getComponent<CharacterControll>().k = knock;
         }
         else        
         {
