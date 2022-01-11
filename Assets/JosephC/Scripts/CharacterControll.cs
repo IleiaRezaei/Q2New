@@ -265,6 +265,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print(collision);
                 currentHP -= 20;
+                OnKnock(k);
             
 
             }
@@ -277,5 +278,6 @@ public class CharacterControll : MonoBehaviour
         RigidBoy.AddForce(knock);
         knockin = true;
         canmove = false;
+        k = new Vector2();
     }
 }
