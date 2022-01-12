@@ -215,7 +215,7 @@ TextureImporter:
         serializedVersion: 2
         x: 435
         y: 0
-        width: 145
+        width: 147
         height: 250
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
@@ -234,9 +234,9 @@ TextureImporter:
       name: pinto_walk_cycle_sheet_final_4
       rect:
         serializedVersion: 2
-        x: 580
+        x: 581
         y: 0
-        width: 145
+        width: 144
         height: 250
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
@@ -278,7 +278,7 @@ TextureImporter:
         serializedVersion: 2
         x: 870
         y: 0
-        width: 145
+        width: 148
         height: 250
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
@@ -297,9 +297,9 @@ TextureImporter:
       name: pinto_walk_cycle_sheet_final_7
       rect:
         serializedVersion: 2
-        x: 1015
+        x: 1017
         y: 0
-        width: 145
+        width: 143
         height: 250
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
