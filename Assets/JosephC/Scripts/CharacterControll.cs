@@ -33,6 +33,8 @@ public class CharacterControll : MonoBehaviour
     private ParticleSystem part;
     private bool canmove = true;
     private bool knockin;
+    private GameObject arrow;
+    private bool dead = false;
 
     public LayerMask lm;
     // Start is called before the first frame update
@@ -46,6 +48,7 @@ public class CharacterControll : MonoBehaviour
         sprt = GetComponent<SpriteRenderer>();
         part = GetComponent<ParticleSystem>();
         hitbox.enabled = false;
+        arrow = transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
@@ -53,13 +56,12 @@ public class CharacterControll : MonoBehaviour
     {
         if(heldobj != null)
         {
+            arrow.transform.position = new Vector3(transform.position.x + Direction.normalized.x, transform.position.y + Direction.normalized.y, arrow.transform.position.z);
+            arrow.transform.rotation = Quaternion.Euler (0,0,Mathf.Atan2(Direction.y, Direction.x) *Mathf.Rad2Deg);
             heldobj.GetComponent<CircleCollider2D>().enabled = false;
             heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
         }
-        if (currentHP == 0)
-        {
-            Destroy(this);
-        }
+
 
         if (currentHP > maxHP)
         {
@@ -73,6 +75,19 @@ public class CharacterControll : MonoBehaviour
                 canmove = true;
             }
         }
+        if (dead)
+        {
+            
+        }
+        else
+        {
+            if (currentHP <= 0)
+            {
+                canmove = false;
+                dead = true;
+                anim_player.Play("die");
+            }
+        }
         if (canmove)
         {
             float movex = (Input.GetAxis("Horizontal"));
@@ -80,7 +95,7 @@ public class CharacterControll : MonoBehaviour
 
             if (new Vector2(movex, movey) != new Vector2(0, 0))
             {
-                intercast = Physics2D.Raycast(transform.position, new Vector2(movex, movey), 2, lm);
+                intercast = Physics2D.Raycast(transform.position, new Vector2(movex, movey), 4, lm);
 
                 if (attacking == false && Dashing == false)
                 {
@@ -89,7 +104,7 @@ public class CharacterControll : MonoBehaviour
                         part.Play(true);
                     }
 
-                    Direction = new Vector2(movex, movey);
+                    Direction = new Vector2(movex, movey).normalized;
                     if (holding)
                     {
 
@@ -266,7 +281,7 @@ public class CharacterControll : MonoBehaviour
                 print(collision);
                 currentHP -= 20;
                 OnKnock(k);
-            
+
 
             }
         }
