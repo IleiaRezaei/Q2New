@@ -6,7 +6,7 @@ public class CharacterControll : MonoBehaviour
     private float MaxSpeed = 5000;
     private Rigidbody2D RigidBoy;
     private CircleCollider2D Coli;
-    private Vector2 Direction = new Vector2(1, 0);
+    public Vector2 Direction = new Vector2(1, 0);
     private CapsuleCollider2D hitbox;
     private Animator anim_player;
     public bool attacking = false;
