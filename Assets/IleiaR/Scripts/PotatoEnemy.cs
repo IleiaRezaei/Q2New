@@ -9,7 +9,9 @@ public class PotatoEnemy : MonoBehaviour
     //public Sprite sprite2;
 
     public GameObject me;
-    public GameObject player; 
+    public GameObject player;
+    public GameObject seekerPP;
+
 
     private Vector3 directionBetween; 
 
@@ -22,7 +24,6 @@ public class PotatoEnemy : MonoBehaviour
 
     public CapsuleCollider2D hitbox;
     public Rigidbody2D RigidBoy;
-
 
     public Vector2 knock;
 
@@ -100,11 +101,17 @@ public class PotatoEnemy : MonoBehaviour
         {
             isAttacking = false;
 
-            Debug.Log("----------------------------isGettingAttacked----------------------------");
+            Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
+
+            Vector2 kbf = player.GetComponent<CharacterControll>().knockback;
+            Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
             //collision.gameObject.GetComponent<CharacterControll>().k = knock;
-            RigidBoy.AddForce(player.GetComponent<CharacterControll>().Direction * player.GetComponent<CharacterControll>().knockback);
+            //RigidBoy.AddForce(player.GetComponent<CharacterControll>().Direction * player.GetComponent<CharacterControll>().knockback);
             //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
+            RigidBoy.AddForce(new Vector2(150000000, 0));
+
+
         }
     }
 
@@ -125,5 +132,15 @@ public class PotatoEnemy : MonoBehaviour
     public void OnKnock(Vector2 knock)
     {
         //hi
+    }
+
+    IEnumerable DisableScript()
+    {
+        seekerPP.GetComponent<AIDestinationSetter>().enabled = false;
+
+        yield return new WaitForSeconds(3f);
+
+        seekerPP.GetComponent<AIDestinationSetter>().enabled = true;
+
     }
 }
