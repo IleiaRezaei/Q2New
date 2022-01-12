@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PotatoEnemy : MonoBehaviour
 {
 
@@ -10,7 +11,8 @@ public class PotatoEnemy : MonoBehaviour
 
     public GameObject me;
     public GameObject player;
-    public GameObject seekerPP;
+    public GameObject seekerParent;
+    
 
 
     private Vector3 directionBetween; 
@@ -136,11 +138,13 @@ public class PotatoEnemy : MonoBehaviour
 
     IEnumerable DisableScript()
     {
-        seekerPP.GetComponent<AIDestinationSetter>().enabled = false;
+        //seekerParent.GetComponent<AIDestinationSetter>().enabled = false;
+        
+        
 
         yield return new WaitForSeconds(3f);
 
-        seekerPP.GetComponent<AIDestinationSetter>().enabled = true;
+        //seekerParent.GetComponent<AIDestinationSetter>().enabled = true;
 
     }
 }
