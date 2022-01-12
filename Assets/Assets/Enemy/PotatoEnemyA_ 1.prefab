@@ -323,9 +323,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   me: {fileID: 7418546962127610920}
   player: {fileID: 0}
+  seekerParent: {fileID: 0}
   isAttacking: 0
   target: {fileID: 0}
   hitbox: {fileID: 7418546962345812298}
+  RigidBoy: {fileID: 0}
   knock: {x: 0, y: 0}
 --- !u!198 &7418546962127610927
 ParticleSystem:
