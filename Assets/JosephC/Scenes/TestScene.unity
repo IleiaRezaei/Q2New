@@ -467,6 +467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: textbox
       objectReference: {fileID: 0}
+    - target: {fileID: 7091287230730951559, guid: 53b44b674d4df894eb5b408c975f7604,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 910739332}
     - target: {fileID: 7091287231294074251, guid: 53b44b674d4df894eb5b408c975f7604,
         type: 3}
       propertyPath: m_AnchoredPosition.x
