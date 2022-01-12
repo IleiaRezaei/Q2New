@@ -31,7 +31,7 @@ public class CharacterControll : MonoBehaviour
     private bool CanDash = false;
     private SpriteRenderer sprt;
     private ParticleSystem part;
-    private bool canmove = true;
+    public bool canmove = true;
     private bool knockin;
     private GameObject arrow;
     private bool dead = false;
@@ -75,17 +75,23 @@ public class CharacterControll : MonoBehaviour
                 canmove = true;
             }
         }
-        if (dead)
-        {
-            
-        }
-        else
-        {
-            if (currentHP <= 0)
+
+        if (currentHP <= 0)
             {
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
+            }
+        if (intercast.collider != null && intercast.collider.tag != "Player")
+        {
+            if (intercast.collider)
+            {
+                if (Input.GetButtonDown("interact"))
+                {
+                    NPC npcscripy = intercast.collider.GetComponent<NPC>();
+                    textbox texscrp = texbox.GetComponent<textbox>();
+                    texscrp.DoText(npcscripy.InterAct(), npcscripy.geticons(), npcscripy);
+                }
             }
         }
         if (canmove)
@@ -107,7 +113,7 @@ public class CharacterControll : MonoBehaviour
                     Direction = new Vector2(movex, movey).normalized;
                     if (holding)
                     {
-
+                        anim_player.Play("WalkHold");
                     }
                     else
                     {
@@ -224,18 +230,7 @@ public class CharacterControll : MonoBehaviour
                     }
                 }
             }
-            if (intercast.collider != null && intercast.collider.tag != "Player")
-            {
-                if (intercast.collider)
-                {
-                    if (Input.GetButtonDown("interact"))
-                    {
-                        NPC npcscripy = intercast.collider.GetComponent<NPC>();
-                        textbox texscrp = texbox.GetComponent<textbox>();
-                        texscrp.DoText(npcscripy.InterAct(), npcscripy.geticons(), npcscripy);
-                    }
-                }
-            }
+
             Debug.DrawRay(transform.position, Direction * 2, Color.yellow);
         }
     }

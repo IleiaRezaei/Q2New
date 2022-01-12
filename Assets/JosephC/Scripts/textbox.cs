@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class textbox : MonoBehaviour
 {
-    
+    public GameObject player;
     int curtext = 0;
     private GameObject texobj;
     bool end;
@@ -23,6 +23,10 @@ public class textbox : MonoBehaviour
     {
         if (end == false)
         {
+            if(curtext == 0)
+            {
+                player.GetComponent<CharacterControll>().canmove = false;
+            }
             anim.Play("TextboxOpen");
             dialogue = true;
             nonpc = n;
@@ -54,11 +58,13 @@ public class textbox : MonoBehaviour
         }
         else
         {
-            
+            player.GetComponent<CharacterControll>().canmove = true;
             end = false;
             curtext = 0;
             anim.Play("TextboxClose");
             dialogue = false;
+            nonpc.End();
+            
         }
     }
 }
