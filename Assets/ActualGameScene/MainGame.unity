@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2010830174}
         m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d523e4f4a33ae94b8d8d3f501e2f967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wall: {fileID: 0}
+  Wall: {fileID: 1094789203}
   Enemy: []
   wallCount: 0
 --- !u!114 &1058222249
@@ -4704,6 +4704,49 @@ MonoBehaviour:
   target: {fileID: 462749974}
   offset: {x: 1, y: 1, z: -10}
   smoothFactor: 10
+--- !u!1 &2010830173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2010830175}
+  - component: {fileID: 2010830174}
+  m_Layer: 0
+  m_Name: sceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2010830174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010830173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6429a973d18984191a91e4be22b579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2010830175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010830173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.336689, y: 1.2687016, z: -207.37482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2026682012
 PrefabInstance:
   m_ObjectHideFlags: 0
