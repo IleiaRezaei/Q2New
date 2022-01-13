@@ -18,7 +18,6 @@ public class EMoveTest : MonoBehaviour
         if (move)
         {
             Vector3 dir = (player.transform.position - transform.position).normalized;
-            print(dir);
             transform.position += new Vector3(dir.x, dir.y, 0) * 0.012F;
             if (dir.x > 0)
             {
