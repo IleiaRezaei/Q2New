@@ -89,6 +89,7 @@ public class CharacterControll : MonoBehaviour
                 print("cum");
                 if (Input.GetButtonDown("interact"))
                 {
+                    print("cummed");
                     NPC npcscripy = intercast.collider.GetComponent<NPC>();
                     textbox texscrp = texbox.GetComponent<textbox>();
                     texscrp.DoText(npcscripy.InterAct(), npcscripy.geticons(), npcscripy);
