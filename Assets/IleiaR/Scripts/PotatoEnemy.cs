@@ -12,8 +12,8 @@ public class PotatoEnemy : MonoBehaviour
     public GameObject me;
     public GameObject player;
     public GameObject seekerParent;
-    
 
+    public bool move = true;
 
     private Vector3 directionBetween; 
 
@@ -49,9 +49,16 @@ public class PotatoEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(RigidBoy.velocity == new Vector2(0, 0))
+        {
+            move = true;
+        }
         directionBetween = me.transform.position - player.transform.position;
-
-        knock = directionBetween.normalized * -5000;
+        if (move)
+        {
+            transform.position -= new Vector3(directionBetween.normalized.x, directionBetween.normalized.y, 0) * 0.012F;
+        }
+        knock = directionBetween.normalized * -50000;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -105,13 +112,13 @@ public class PotatoEnemy : MonoBehaviour
 
             Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
-
+            move = false;
             Vector2 kbf = player.GetComponent<CharacterControll>().knockback;
             Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
             //collision.gameObject.GetComponent<CharacterControll>().k = knock;
             //RigidBoy.AddForce(player.GetComponent<CharacterControll>().Direction * player.GetComponent<CharacterControll>().knockback);
             //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
-            RigidBoy.AddForce(new Vector2(150000000, 0));
+            RigidBoy.AddForce(kbf);
 
 
         }
