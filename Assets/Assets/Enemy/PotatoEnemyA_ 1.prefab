@@ -324,6 +324,7 @@ MonoBehaviour:
   me: {fileID: 7418546962127610920}
   player: {fileID: 0}
   seekerParent: {fileID: 0}
+  move: 1
   isAttacking: 0
   target: {fileID: 0}
   hitbox: {fileID: 7418546962345812298}

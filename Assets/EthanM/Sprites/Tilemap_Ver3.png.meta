@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 8428cdf69796144478364e8284ca6a2a
+guid: b7ffaeb09c410ad4a94b85339958a6f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7972053590511712255
-    second: pinto_walk_cycle_sheet_hold (1)_0
+      213: -475945458862228834
+    second: Tilemap_Ver3_0
   - first:
-      213: -4313490830445916554
-    second: pinto_walk_cycle_sheet_hold (1)_1
+      213: 5476872574902359807
+    second: Tilemap_Ver3_1
   - first:
-      213: 4044556324431466283
-    second: pinto_walk_cycle_sheet_hold (1)_2
+      213: -2701381181486209844
+    second: Tilemap_Ver3_2
   - first:
-      213: 8745086265050711319
-    second: pinto_walk_cycle_sheet_hold (1)_3
+      213: 977251333335228524
+    second: Tilemap_Ver3_3
   - first:
-      213: -7504794923484268999
-    second: pinto_walk_cycle_sheet_hold (1)_4
-  - first:
-      213: -5164643152401086684
-    second: pinto_walk_cycle_sheet_hold (1)_5
-  - first:
-      213: -6599423090092769204
-    second: pinto_walk_cycle_sheet_hold (1)_6
-  - first:
-      213: 3557658575460436645
-    second: pinto_walk_cycle_sheet_hold (1)_7
+      213: 1437206472844856971
+    second: Tilemap_Ver3_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -81,14 +72,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +103,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +115,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +127,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,169 +138,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_0
+      name: Tilemap_Ver3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
+        width: 204.8
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff7f3d8b08c62ae60800000000000000
-      internalID: 7972053590511712255
+      spriteID: e9a7e08702a1569f0800000000000000
+      internalID: -475945458862228834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_1
+      name: Tilemap_Ver3_1
       rect:
         serializedVersion: 2
-        x: 145
+        x: 204
         y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
+        width: 204.8
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ecd5d81f66324c0800000000000000
-      internalID: -4313490830445916554
+      spriteID: ff65223d692c10c40800000000000000
+      internalID: 5476872574902359807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_2
+      name: Tilemap_Ver3_2
       rect:
         serializedVersion: 2
-        x: 290
+        x: 408
         y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
+        width: 204.8
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f0ccf4c86212830800000000000000
-      internalID: 4044556324431466283
+      spriteID: cc4e692c024c28ad0800000000000000
+      internalID: -2701381181486209844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_3
+      name: Tilemap_Ver3_3
       rect:
         serializedVersion: 2
-        x: 435
+        x: 612
         y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
+        width: 204.8
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 715ce76ef99cc5970800000000000000
-      internalID: 8745086265050711319
+      spriteID: c6029b3f8e4ef8d00800000000000000
+      internalID: 977251333335228524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_4
+      name: Tilemap_Ver3_4
       rect:
         serializedVersion: 2
-        x: 580
+        x: 816
         y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
+        width: 204.8
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 936b09977cc99d790800000000000000
-      internalID: -7504794923484268999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_5
-      rect:
-        serializedVersion: 2
-        x: 725
-        y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 427ca759a608358b0800000000000000
-      internalID: -5164643152401086684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_6
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4082803aa32a64a0800000000000000
-      internalID: -6599423090092769204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pinto_walk_cycle_sheet_hold (1)_7
-      rect:
-        serializedVersion: 2
-        x: 1015
-        y: 0
-        width: 145
-        height: 250
-      alignment: 9
-      pivot: {x: 0.35, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aa017600a75f5130800000000000000
-      internalID: 3557658575460436645
+      spriteID: b8e4fc22cabf1f310800000000000000
+      internalID: 1437206472844856971
       vertices: []
       indices: 
       edges: []
