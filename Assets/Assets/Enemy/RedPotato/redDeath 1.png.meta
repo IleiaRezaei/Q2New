@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 66ee196fc86960a4b8d568eecc6c367a
+guid: 3773366538c1ba1439e742c7f8cedb02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3684198716509934188
-    second: redpotatoexplode_0
+      213: -1290993444080718555
+    second: redDeath 1_0
   - first:
-      213: -1720006449510631641
-    second: redpotatoexplode_1
+      213: 5746213811852436345
+    second: redDeath 1_1
   - first:
-      213: -4010035947181645198
-    second: redpotatoexplode_2
+      213: -5830860793423845455
+    second: redDeath 1_2
   - first:
-      213: 1215742521604230402
-    second: redpotatoexplode_3
+      213: -2298743810984547790
+    second: redDeath 1_3
   - first:
-      213: 2688516701793661433
-    second: redpotatoexplode_4
+      213: 874616870231027358
+    second: redDeath 1_4
   - first:
-      213: -2884773510370142567
-    second: redpotatoexplode_5
+      213: -5275277688615237990
+    second: redDeath 1_5
   - first:
-      213: 6132955979227017380
-    second: redpotatoexplode_6
+      213: -9118279525019663352
+    second: redDeath 1_6
   - first:
-      213: -3431150611527817379
-    second: redpotatoexplode_7
+      213: -4676126474761506564
+    second: redDeath 1_7
   - first:
-      213: 4020099987271902846
-    second: redpotatoexplode_8
+      213: -2293777616183367487
+    second: redDeath 1_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,7 +150,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: redpotatoexplode_0
+      name: redDeath 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6256838637e02330800000000000000
-      internalID: 3684198716509934188
+      spriteID: 52de5367d48751ee0800000000000000
+      internalID: -1290993444080718555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_1
+      name: redDeath 1_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 727b9854f3f4128e0800000000000000
-      internalID: -1720006449510631641
+      spriteID: 97368e26407aebf40800000000000000
+      internalID: 5746213811852436345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_2
+      name: redDeath 1_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272e0b75d8d7958c0800000000000000
-      internalID: -4010035947181645198
+      spriteID: 1b72839600f941fa0800000000000000
+      internalID: -5830860793423845455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_3
+      name: redDeath 1_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20dce82d16f2fd010800000000000000
-      internalID: 1215742521604230402
+      spriteID: 23a63a4eea83910e0800000000000000
+      internalID: -2298743810984547790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_4
+      name: redDeath 1_4
       rect:
         serializedVersion: 2
         x: 4096
@@ -248,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f1bd1722b78f4520800000000000000
-      internalID: 2688516701793661433
+      spriteID: e9e2fa8d863432c00800000000000000
+      internalID: 874616870231027358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_5
+      name: redDeath 1_5
       rect:
         serializedVersion: 2
         x: 5120
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9965ee8c6c937f7d0800000000000000
-      internalID: -2884773510370142567
+      spriteID: a968b8e44e27ac6b0800000000000000
+      internalID: -5275277688615237990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_6
+      name: redDeath 1_6
       rect:
         serializedVersion: 2
         x: 6144
@@ -290,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a03fe428f2ac1550800000000000000
-      internalID: 6132955979227017380
+      spriteID: 8044c7c251d557180800000000000000
+      internalID: -9118279525019663352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_7
+      name: redDeath 1_7
       rect:
         serializedVersion: 2
         x: 7168
@@ -311,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d572505a2ba1260d0800000000000000
-      internalID: -3431150611527817379
+      spriteID: cf07a031fbf0b1fb0800000000000000
+      internalID: -4676126474761506564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: redpotatoexplode_8
+      name: redDeath 1_8
       rect:
         serializedVersion: 2
         x: 8192
@@ -332,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e76e4e693a34ac730800000000000000
-      internalID: 4020099987271902846
+      spriteID: 1c8e5a9396dda20e0800000000000000
+      internalID: -2293777616183367487
       vertices: []
       indices: 
       edges: []

@@ -36,4 +36,6 @@ public class RedPotatoExplosion : MonoBehaviour
             isExploding = true;
         }
     }
+
+
 }
