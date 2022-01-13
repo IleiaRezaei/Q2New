@@ -277,7 +277,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print(collision);
                 currentHP -= 20;
-                k = collision.GetComponent<PotatoEnemy>().knock;
+                k = collision.gameObject.GetComponent<PotatoEnemy>().knock;
                 OnKnock(k);
 
 

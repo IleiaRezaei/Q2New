@@ -29,7 +29,7 @@ public class PotatoEnemy : MonoBehaviour
 
     public Vector2 knock;
 
-    public float potatoSpeed = 0.008f;
+    public float potatoSpeed = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,9 +57,9 @@ public class PotatoEnemy : MonoBehaviour
         directionBetween = me.transform.position - player.transform.position;
         if (move)
         {
-            transform.position -= new Vector3(directionBetween.normalized.x, directionBetween.normalized.y, 0) * potatoSpeed;
+            transform.position -= new Vector3(directionBetween.normalized.x, directionBetween.normalized.y, 0) * potatoSpeed * Time.deltaTime;
         }
-        knock = directionBetween.normalized * -50000;
+        knock = directionBetween.normalized * 50000;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -121,7 +121,7 @@ public class PotatoEnemy : MonoBehaviour
             //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
             RigidBoy.AddForce(kbf);
 
-            potatoSpeed *= 3;
+            potatoSpeed *= 1.75f;
         }
     }
 
