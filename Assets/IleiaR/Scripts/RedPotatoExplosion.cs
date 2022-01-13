@@ -34,6 +34,8 @@ public class RedPotatoExplosion : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             isExploding = true;
+
+            anim.SetBool("Explosion", true);
         }
     }
 
