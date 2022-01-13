@@ -2023,10 +2023,20 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 462749974}
+    - target: {fileID: 7218428474908668338, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7218428474908668342, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_Name
       value: PotatoEnemyA_ 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218428474908668343, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7418546962127610924, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
@@ -2037,6 +2047,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1382447916}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: potatoSpeed
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 7418546962345812298, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
