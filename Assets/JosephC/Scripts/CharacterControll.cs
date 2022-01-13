@@ -86,6 +86,7 @@ public class CharacterControll : MonoBehaviour
         {
             if (intercast.collider)
             {
+                print("cum");
                 if (Input.GetButtonDown("interact"))
                 {
                     NPC npcscripy = intercast.collider.GetComponent<NPC>();
@@ -208,6 +209,7 @@ public class CharacterControll : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
                     {
+                        heldobj.transform.position = transform.position;
                         heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 69;
                         heldobj.GetComponent<Rigidbody2D>().angularVelocity = 3600;
                         heldobj.GetComponent<Collider2D>().enabled = true;
