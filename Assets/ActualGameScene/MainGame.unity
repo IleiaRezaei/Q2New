@@ -2179,6 +2179,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1382447916}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: potatoSpeed
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 7418546962345812298, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_Offset.x
