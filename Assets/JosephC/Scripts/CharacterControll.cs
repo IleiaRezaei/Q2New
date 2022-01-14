@@ -36,6 +36,8 @@ public class CharacterControll : MonoBehaviour
     private GameObject arrow;
     private bool dead = false;
 
+    public GameObject deathScene;
+
     public LayerMask lm;
     // Start is called before the first frame update
     void Start()
@@ -81,11 +83,13 @@ public class CharacterControll : MonoBehaviour
         }
 
         if (currentHP <= 0)
-            {
+        {
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
-            }
+            Time.timeScale = 0;
+                deathScene.SetActive(true);
+        }
         if (intercast.collider != null && intercast.collider.tag != "Player")
         {
             if (intercast.collider)
