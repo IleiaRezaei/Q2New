@@ -87,7 +87,7 @@ public class CharacterControll : MonoBehaviour
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
-            Time.timeScale = 0;
+                Time.timeScale = 0;
                 deathScene.SetActive(true);
         }
         if (intercast.collider != null && intercast.collider.tag != "Player")
@@ -218,7 +218,6 @@ public class CharacterControll : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
                     {
-                        heldobj.GetComponent<ball>().held = false;
                         heldobj.transform.position = transform.position;
                         heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 50;
                         heldobj.GetComponent<ball>().damage = 100;
