@@ -17,7 +17,7 @@ public class ball : MonoBehaviour
 
     private void Update()
     {
-        Knockback = GetComponent<Rigidbody2D>().velocity;
+        Knockback = GetComponent<Rigidbody2D>().velocity *10;
         if (Rigidboy.velocity == new Vector2() && held == false)
         {
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
@@ -32,17 +32,20 @@ public class ball : MonoBehaviour
         {
             if (collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding != true)
             {
+                Rigidboy.angularVelocity = 0;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 held = true;
                 gameObject.layer = 9;
                 GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 GetComponent<Rigidbody2D>().freezeRotation = false;
+                Rigidboy.drag = 5;
+                Rigidboy.angularDrag = 0.5F;
                 collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().heldobj = this.gameObject;
                 collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding = true;
             }
         }
         else
         {
-
             tag = "Untagged";
         }
     }
