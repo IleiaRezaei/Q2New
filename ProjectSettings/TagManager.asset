@@ -14,6 +14,7 @@ TagManager:
   - PotatoParent
   - ThrownObj
   - RedPotato
+  - nextScene
   layers:
   - Default
   - TransparentFX
