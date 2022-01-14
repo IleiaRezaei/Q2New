@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
 
     private CapsuleCollider2D hitbox;
 
+    private Collider2D lhit;
+
 
     // Start is called before the first frame update
     void Start()    
@@ -28,8 +30,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        
     }
 
     void FixedUpdate()
@@ -38,7 +39,7 @@ public class Enemy : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
         if (collision.gameObject.tag == "PlayerAttack")
         {
             int dam = collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().damage;
@@ -49,7 +50,22 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
-        }       
+        }
+        if (collision.gameObject.tag == "ThrownObj")
+        {
+            if (lhit != collision)
+            {
+                int dam = collision.gameObject.GetComponent<ball>().damage;
+                Vector2 knock = collision.gameObject.GetComponent<ball>().Knockback * Time.deltaTime;
+                rb.AddForce(knock);
+                health -= dam/2;
+                collision.gameObject.tag = "Untagged";
+                if (health <= 0)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
+        }
     }
 }
 //
