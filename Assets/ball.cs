@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-    public float damage;
+    public int damage;
     public Vector2 Knockback;
+
+    private void Update()
+    {
+        Knockback = GetComponent<Rigidbody2D>().velocity;
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PlayerAttack")

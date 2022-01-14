@@ -126,6 +126,22 @@ public class PotatoEnemy : MonoBehaviour
 
             potatoSpeed *= 1.2f;
         }
+        if (collision.gameObject.tag == "ThrownObj")
+        {
+            isAttacking = false;
+
+            Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
+
+            move = false;
+            Vector2 kbf = collision.gameObject.GetComponent<ball>().Knockback;
+            Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
+            //collision.gameObject.GetComponent<CharacterControll>().k = knock;
+            //RigidBoy.AddForce(player.GetComponent<CharacterControll>().Direction * player.GetComponent<CharacterControll>().knockback);
+            //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
+            RigidBoy.AddForce(kbf);
+
+            potatoSpeed *= 1.75f;
+        }
     }
 
     
