@@ -246,7 +246,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print("heavy");
                 attacking = true;
-                knockback = Direction * 3500;
+                knockback = Direction * 10000;
                 return 69;
 
             }

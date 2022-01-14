@@ -31,7 +31,6 @@ public class Border : MonoBehaviour
         }
         if(wallCount == 0)
         {
-            Debug.Log("Everything destroyed");
             Destroy(Wall);
         }
     }
