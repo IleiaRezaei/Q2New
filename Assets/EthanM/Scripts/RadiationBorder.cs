@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Border : MonoBehaviour
+public class RadiationBorder : MonoBehaviour
 {
     public GameObject Wall;
     public GameObject Wall2;
@@ -22,17 +22,21 @@ public class Border : MonoBehaviour
     {
 
         wallCount = 0;
-        foreach(GameObject e in Enemy)
-        {  
-           
-            if(e != null)
+        foreach (GameObject e in Enemy)
+        {
+
+            if (e != null)
             {
                 wallCount++;
             }
         }
-        if(wallCount <= 1)
+        if (wallCount <= 6)
         {
             Destroy(Wall);
+        }
+        if (wallCount <= 0)
+        {
+            Destroy(Wall2);
         }
     }
 }
