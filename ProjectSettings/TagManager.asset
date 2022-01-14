@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - PotatoParent
   - ThrownObj
+  - RedPotato
   layers:
   - Default
   - TransparentFX

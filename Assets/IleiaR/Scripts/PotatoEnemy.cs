@@ -124,7 +124,7 @@ public class PotatoEnemy : MonoBehaviour
             //RigidBoy.AddForce(player.GetComponent<CharacterControll>().knockback);
             RigidBoy.AddForce(kbf);
 
-            potatoSpeed *= 1.75f;
+            potatoSpeed *= 1.2f;
         }
     }
 
