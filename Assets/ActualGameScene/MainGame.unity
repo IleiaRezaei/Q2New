@@ -866,7 +866,7 @@ PrefabInstance:
     - target: {fileID: 7091287230730951552, guid: 53b44b674d4df894eb5b408c975f7604,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -617.46716
+      value: -379.9884
       objectReference: {fileID: 0}
     - target: {fileID: 7091287230730951552, guid: 53b44b674d4df894eb5b408c975f7604,
         type: 3}
@@ -911,7 +911,7 @@ PrefabInstance:
     - target: {fileID: 7091287230730951552, guid: 53b44b674d4df894eb5b408c975f7604,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -114
+      value: 57.1734
       objectReference: {fileID: 0}
     - target: {fileID: 7091287230730951552, guid: 53b44b674d4df894eb5b408c975f7604,
         type: 3}
@@ -933,6 +933,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: textbox
       objectReference: {fileID: 0}
+    - target: {fileID: 7091287230730951559, guid: 53b44b674d4df894eb5b408c975f7604,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1382447916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b44b674d4df894eb5b408c975f7604, type: 3}
 --- !u!224 &324075968 stripped
@@ -1355,6 +1360,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &408068496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7091287230730951555, guid: 53b44b674d4df894eb5b408c975f7604,
+    type: 3}
+  m_PrefabInstance: {fileID: 324075967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &434988326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227161329011195200, guid: 60d2db1be685e6c4c8f8346893e5706e,
@@ -3296,7 +3307,7 @@ PrefabInstance:
         type: 3}
       propertyPath: texbox
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 408068496}
     - target: {fileID: 7894098545258738930, guid: 79feaf24109e9084dba6ea3657171dd7,
         type: 3}
       propertyPath: m_Enabled
