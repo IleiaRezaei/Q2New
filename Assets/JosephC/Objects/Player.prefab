@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5643364381203224688}
   - component: {fileID: 8479369821632864264}
   - component: {fileID: 1779950434766460328}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5049,6 +5049,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.50439674, y: 0}
-  m_Size: {x: 1.1970803, y: 2.4500313}
+  m_Offset: {x: 0.50439656, y: 0}
+  m_Size: {x: 1.5363879, y: 2.4500313}
   m_Direction: 0

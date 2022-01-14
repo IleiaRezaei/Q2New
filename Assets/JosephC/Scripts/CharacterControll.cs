@@ -60,8 +60,12 @@ public class CharacterControll : MonoBehaviour
             arrow.transform.rotation = Quaternion.Euler (0,0,Mathf.Atan2(Direction.y, Direction.x) *Mathf.Rad2Deg);
             heldobj.GetComponent<Collider2D>().enabled = false;
             heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            arrow.SetActive(true);
         }
-
+        else
+        {
+            arrow.SetActive(false);
+        }
 
         if (currentHP > maxHP)
         {
@@ -186,13 +190,13 @@ public class CharacterControll : MonoBehaviour
             }
             if (Direction.x > 0)
             {
-                hitbox.offset = new Vector2(0.9252081F, hitbox.offset.y);
+                hitbox.offset = new Vector2(0.5043967F, hitbox.offset.y);
                 sprt.flipX = false;
             }
             if (Direction.x < 0)
             {
                 sprt.flipX = true;
-                hitbox.offset = new Vector2(-0.9252081F, hitbox.offset.y);
+                hitbox.offset = new Vector2(-0.5043967F, hitbox.offset.y);
             }
             if (Input.GetButtonDown("Jump") && CanDash && attacking == false)
             {
@@ -247,7 +251,7 @@ public class CharacterControll : MonoBehaviour
                 print("heavy");
                 attacking = true;
                 knockback = Direction * 10000;
-                return 69;
+                return 40;
 
             }
             else
@@ -256,7 +260,7 @@ public class CharacterControll : MonoBehaviour
                 hitbox.enabled = true;
                 attacking = true;
                 knockback = Direction * 2000;
-                return 40;
+                return 20;
 
             }
         }
