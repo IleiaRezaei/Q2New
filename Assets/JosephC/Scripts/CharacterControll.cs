@@ -10,7 +10,7 @@ public class CharacterControll : MonoBehaviour
     private CapsuleCollider2D hitbox;
     private Animator anim_player;
     public bool attacking = false;
-    private bool Dashing = false;
+    public bool Dashing = false;
     public GameObject heldobj;
     public bool holding = false;
     public Vector2 k;
@@ -215,9 +215,11 @@ public class CharacterControll : MonoBehaviour
                     if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
                     {
                         heldobj.transform.position = transform.position;
-                        heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 69;
-                        heldobj.GetComponent<Rigidbody2D>().angularVelocity = 3600;
+                        heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 5;
+                        heldobj.GetComponent<Rigidbody2D>().angularVelocity = 2000 * Direction.x;
                         heldobj.GetComponent<Collider2D>().enabled = true;
+                        heldobj.tag = "ThrownObj";
+                        heldobj.GetComponent<ball>().damage = 100;
                         heldobj = null;
                         holding = false;
                         

@@ -100,12 +100,15 @@ public class PotatoEnemy : MonoBehaviour
         //Debug.Log(":::::::::::::::::::::" + collision.gameObject.tag);
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("++++++++++++++++++++++++++++isAttacking++++++++++++++++++++++++++++");
-            isAttacking = true;
+            if (collision.gameObject.GetComponent<CharacterControll>().Dashing == false)
+            {
+                Debug.Log("++++++++++++++++++++++++++++isAttacking++++++++++++++++++++++++++++");
+                isAttacking = true;
 
-            anim_potato.SetBool("isAttacking", true);
+                anim_potato.SetBool("isAttacking", true);
 
-            hitbox.enabled = true;
+                hitbox.enabled = true;
+            }
         }
         if(collision.gameObject.tag == "PlayerAttack")
         {

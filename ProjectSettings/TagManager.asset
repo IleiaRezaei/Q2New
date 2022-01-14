@@ -12,6 +12,7 @@ TagManager:
   - startButton
   - Wall
   - PotatoParent
+  - ThrownObj
   layers:
   - Default
   - TransparentFX
@@ -23,9 +24,9 @@ TagManager:
   - 
   - NPC
   - Obstacle
-  - Collision
-  - 
-  - 
+  - Wall
+  - Enemy
+  - Player
   - 
   - 
   - 
