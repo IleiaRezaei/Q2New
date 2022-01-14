@@ -330,6 +330,7 @@ MonoBehaviour:
   hitbox: {fileID: 7418546962345812298}
   RigidBoy: {fileID: 0}
   knock: {x: 0, y: 0}
+  potatoSpeed: 0.8
 --- !u!198 &7418546962127610927
 ParticleSystem:
   m_ObjectHideFlags: 0
