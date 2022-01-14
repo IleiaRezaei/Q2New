@@ -214,6 +214,7 @@ public class CharacterControll : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Light") || Input.GetButtonDown("Heavy"))
                     {
+                        heldobj.GetComponent<ball>().held = false;
                         heldobj.transform.position = transform.position;
                         heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 50;
                         heldobj.GetComponent<ball>().damage = 100;

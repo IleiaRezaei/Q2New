@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
                 Vector2 knock = collision.gameObject.GetComponent<ball>().Knockback * Time.deltaTime;
                 rb.AddForce(knock);
                 health -= dam/2;
-                collision.gameObject.tag = "Untagged";
+
                 if (health <= 0)
                 {
                     Destroy(this.gameObject);
