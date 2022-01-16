@@ -29,18 +29,21 @@ public class RedPotatoExplosion : MonoBehaviour
         if(isExploding == true)
         {
             anim_RedPot.Play("Explosion");
-
             anim_RedPot.SetBool("RedExplode", true);
         }
+
+        Debug.Log(isExploding);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("--------------------------hit" + collision.gameObject.tag);
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hi");
+            Debug.Log("Hi---------");
 
             isExploding = true;
+
         }
     }
 
