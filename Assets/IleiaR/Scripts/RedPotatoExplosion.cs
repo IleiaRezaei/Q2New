@@ -20,7 +20,7 @@ public class RedPotatoExplosion : MonoBehaviour
         anim_RedPot = GetComponent<Animator>();
 
         isExploding = false;
-        anim_RedPot.SetBool("RedExplode", false);
+        //anim_RedPot.SetBool("RedExplode", false);
     }
 
     // Update is called once per frame
@@ -28,11 +28,11 @@ public class RedPotatoExplosion : MonoBehaviour
     {
         if(isExploding == true)
         {
-            anim_RedPot.Play("Explosion");
-            anim_RedPot.SetBool("RedExplode", true);
+            //anim_RedPot.Play("Explosion");
+            //anim_RedPot.SetBool("Explode", true);
         }
 
-        Debug.Log(isExploding);
+        //Debug.Log(isExploding);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +44,8 @@ public class RedPotatoExplosion : MonoBehaviour
 
             isExploding = true;
 
+            //anim_RedPot.SetBool("Explode", true);
+            anim_RedPot.Play("Explosion");
         }
     }
 

@@ -2772,7 +2772,7 @@ PrefabInstance:
     - target: {fileID: 8859755262292737658, guid: 3685165357de705459c3b35a6eea7520,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.208229
+      value: 2.523346
       objectReference: {fileID: 0}
     - target: {fileID: 8859755262292737658, guid: 3685165357de705459c3b35a6eea7520,
         type: 3}
@@ -2782,7 +2782,7 @@ PrefabInstance:
     - target: {fileID: 8859755262292737658, guid: 3685165357de705459c3b35a6eea7520,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.19781876
+      value: 0.1446228
       objectReference: {fileID: 0}
     - target: {fileID: 8859755262292737658, guid: 3685165357de705459c3b35a6eea7520,
         type: 3}
@@ -4195,14 +4195,14 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642319724}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19781876, y: 0.026000977}
-  m_Size: {x: 3.208229, y: 3.4938931}
+  m_Offset: {x: 0.028932571, y: 0.026000977}
+  m_Size: {x: 2.7547264, y: 3.4938931}
   m_Direction: 0
 --- !u!1 &1690534671
 GameObject:
