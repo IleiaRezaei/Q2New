@@ -296,7 +296,9 @@ GameObject:
   - component: {fileID: 515851032}
   - component: {fileID: 515851035}
   - component: {fileID: 515851034}
+  - component: {fileID: 515851037}
   - component: {fileID: 515851033}
+  - component: {fileID: 515851036}
   m_Layer: 5
   m_Name: CreditButton
   m_TagString: Untagged
@@ -320,7 +322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.31, y: -269.8}
+  m_AnchoredPosition: {x: -7.31, y: -263.8}
   m_SizeDelta: {x: 331.3, y: 290}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &515851033
@@ -414,6 +416,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515851031}
   m_CullTransparentMesh: 0
+--- !u!61 &515851036
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515851031}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -12.220215, y: -17.92862}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 268.6139, y: 159.20471}
+  m_EdgeRadius: 0
+--- !u!114 &515851037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515851031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc7cd421396d64496f34b22ba2a43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSize: 1.5
+  ySize: 1.5
+  zSize: 1.5
 --- !u!1 &625258954
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,9 +570,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a1027d4ce9b0ba4282701ccd51baca8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -623,6 +666,8 @@ GameObject:
   - component: {fileID: 725161442}
   - component: {fileID: 725161441}
   - component: {fileID: 725161440}
+  - component: {fileID: 725161445}
+  - component: {fileID: 725161443}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -646,7 +691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.31, y: -41.6}
+  m_AnchoredPosition: {x: -7.31, y: -11.86}
   m_SizeDelta: {x: 369, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725161440
@@ -740,6 +785,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725161438}
   m_CullTransparentMesh: 0
+--- !u!61 &725161443
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725161438}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -12.220215, y: -17.92862}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 268.6139, y: 159.20471}
+  m_EdgeRadius: 0
+--- !u!114 &725161445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725161438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc7cd421396d64496f34b22ba2a43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSize: 1.5
+  ySize: 1.5
+  zSize: 1.5
 --- !u!1 &1282061040
 GameObject:
   m_ObjectHideFlags: 0
