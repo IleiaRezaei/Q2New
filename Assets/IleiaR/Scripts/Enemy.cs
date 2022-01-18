@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
 
     private Collider2D lhit;
 
+    public bool dead = false;
+
 
     // Start is called before the first frame update
     void Start()    
@@ -30,7 +32,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (dead)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -62,7 +67,7 @@ public class Enemy : MonoBehaviour
 
                 if (health <= 0)
                 {
-                    Destroy(this.gameObject);
+                    GetComponent<Animator>().Play("die");
                 }
             }
         }
