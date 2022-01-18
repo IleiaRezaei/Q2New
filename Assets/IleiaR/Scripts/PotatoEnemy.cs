@@ -59,7 +59,7 @@ public class PotatoEnemy : MonoBehaviour
         {
             transform.position -= new Vector3(directionBetween.normalized.x, directionBetween.normalized.y, 0) * potatoSpeed * Time.deltaTime;
         }
-        knock = directionBetween.normalized * -5000;
+        knock = directionBetween.normalized * -2500;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
