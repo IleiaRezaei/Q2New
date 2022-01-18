@@ -8,7 +8,8 @@ public class RedPotatoExplosion : MonoBehaviour
     public bool isExploding;
 
     private SpriteRenderer spriteRenderer;
-    private Animator anim_RedPot;
+
+    private Animator animRedPot;
 
     private Rigidbody2D RigidBoy;
 
@@ -17,7 +18,8 @@ public class RedPotatoExplosion : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         RigidBoy.GetComponent<Rigidbody2D>();
-        anim_RedPot = GetComponent<Animator>();
+
+        animRedPot = GetComponent<Animator>();
 
         isExploding = false;
         //anim_RedPot.SetBool("RedExplode", false);
@@ -29,7 +31,8 @@ public class RedPotatoExplosion : MonoBehaviour
         if(isExploding == true)
         {
             //anim_RedPot.Play("Explosion");
-            //anim_RedPot.SetBool("Explode", true);
+            //animRedPot.SetBool("Explode", true);
+            animRedPot.SetBool("ex", true);
         }
 
         //Debug.Log(isExploding);
@@ -45,7 +48,9 @@ public class RedPotatoExplosion : MonoBehaviour
             isExploding = true;
 
             //anim_RedPot.SetBool("Explode", true);
-            anim_RedPot.Play("Explosion");
+            //animRedPot.Play("Explosion");
+            //animRedPot.SetBool("isAttacking", false);
+
         }
     }
 
