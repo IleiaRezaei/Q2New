@@ -87,8 +87,6 @@ public class CharacterControll : MonoBehaviour
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
-                Time.timeScale = 0;
-                deathScene.SetActive(true);
         }
         if (intercast.collider != null && intercast.collider.tag != "Player")
         {
