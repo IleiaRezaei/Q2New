@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SeneStart : MonoBehaviour
 {
+    public bool pausemenu;
+    public GameObject pausemenumenu;
+
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PauseMenu>().Closepausemenu();
-        Time.timeScale = 1;
+        PauseMenu PauseMenuScript = pausemenumenu.GetComponent<PauseMenu>();
+        PauseMenuScript.openPausemenu();
+        PauseMenuScript.Closepausemenu();
     }
 
 }

@@ -7,6 +7,7 @@ public class die : StateMachineBehaviour
 {
     void Start()
     {
+        Debug.Log("cum");
         SceneManager.LoadScene("Start", LoadSceneMode.Single);
     }
     

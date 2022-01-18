@@ -17,7 +17,7 @@ public class ball : MonoBehaviour
 
     private void Update()
     {
-        Knockback = GetComponent<Rigidbody2D>().velocity *10;
+        Knockback = GetComponent<Rigidbody2D>().velocity *500;
         if (Rigidboy.velocity == new Vector2() && held == false)
         {
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;

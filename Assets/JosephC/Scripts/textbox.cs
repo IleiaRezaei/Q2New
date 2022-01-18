@@ -18,6 +18,7 @@ public class textbox : MonoBehaviour
         texobj = transform.GetChild(0).gameObject;
         anim = GetComponent<Animator>();
         ico = transform.GetChild(1).gameObject;
+        gameObject.active = false;
     }
     public void DoText(string[] text, Sprite[] pic,NPC n)
     {
@@ -27,6 +28,7 @@ public class textbox : MonoBehaviour
             {
                 player.GetComponent<CharacterControll>().canmove = false;
             }
+            gameObject.active = true;
             anim.Play("TextboxOpen");
             dialogue = true;
             nonpc = n;

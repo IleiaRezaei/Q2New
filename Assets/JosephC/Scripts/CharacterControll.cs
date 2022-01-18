@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CharacterControll : MonoBehaviour
 {
     public float MoveSpeed = 5000;
@@ -35,6 +35,7 @@ public class CharacterControll : MonoBehaviour
     private bool knockin;
     private GameObject arrow;
     private bool dead = false;
+    public bool die = false;
 
     public GameObject deathScene;
 
@@ -56,6 +57,9 @@ public class CharacterControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (die){
+            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        }
         if(heldobj != null)
         {
             arrow.transform.position = new Vector3(transform.position.x + Direction.normalized.x, transform.position.y + Direction.normalized.y, arrow.transform.position.z);
@@ -87,8 +91,6 @@ public class CharacterControll : MonoBehaviour
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
-                Time.timeScale = 0;
-                deathScene.SetActive(true);
         }
         if (intercast.collider != null && intercast.collider.tag != "Player")
         {
@@ -289,7 +291,7 @@ public class CharacterControll : MonoBehaviour
             {
                 print(collision);
                 currentHP -= 20;
-                k = collision.gameObject.GetComponent<PotatoEnemy>().knock;
+                k = collision.transform.parent.gameObject.GetComponent<PotatoEnemy>().knock;
                 OnKnock(k);
 
 
