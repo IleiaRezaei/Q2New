@@ -15,15 +15,16 @@ public class EMoveTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (move)
+        Vector3 dir = (player.transform.position - transform.position);
+        print(Mathf.Abs(dir.x));
+        if (move && Mathf.Abs(dir.x) <= 5)
         {
-            Vector3 dir = (player.transform.position - transform.position).normalized;
-            transform.position += new Vector3(dir.x, dir.y, 0) * 0.012F;
-            if (dir.x > 0)
+            transform.position += new Vector3(dir.normalized.x, dir.normalized.y, 0) * 0.012F;
+            if (dir.normalized.x > 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
             }
-            if (dir.x < 0)
+            if (dir.normalized.x < 0)
             {
                 GetComponent<SpriteRenderer>().flipX = false;
             }
