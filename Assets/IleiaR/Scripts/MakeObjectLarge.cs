@@ -22,7 +22,7 @@ public class MakeObjectLarge : MonoBehaviour, IPointerEnterHandler, IPointerExit
     //Detect if the Cursor starts to pass over the GameObject
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 
     }
 

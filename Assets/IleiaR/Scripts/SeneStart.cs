@@ -10,31 +10,9 @@ public class SeneStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        
-            if (pausemenu == false)
-            {
-                openPausemenu();
-                pausemenu = true;
-            }
-            else if (pausemenu == true)
-            {
-                Closepausemenu();
-                pausemenu = false;
-            }
-
-        void openPausemenu()
-        {
-            Time.timeScale = 0;
-            pausemenumenu.SetActive(true);
-        }
-
-        void Closepausemenu()
-        {
-            pausemenumenu.SetActive(false);
-            Time.timeScale = 1;
-        }
-
+        PauseMenu PauseMenuScript = pausemenumenu.GetComponent<PauseMenu>();
+        PauseMenuScript.openPausemenu();
+        PauseMenuScript.Closepausemenu();
     }
 
 }
