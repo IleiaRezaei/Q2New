@@ -27,12 +27,19 @@ public class PotatoEnemy : MonoBehaviour
     public CapsuleCollider2D hitbox;
     public Rigidbody2D RigidBoy;
 
+    private AudioSource aud;
+
+    public AudioClip hurt;
+    public AudioClip attack;
+
     public Vector2 knock;
 
     public float potatoSpeed = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
+
         RigidBoy = GetComponent<Rigidbody2D>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -118,6 +125,8 @@ public class PotatoEnemy : MonoBehaviour
             Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
             move = false;
+            aud.clip = hurt;
+            aud.Play();
             Vector2 kbf = player.GetComponent<CharacterControll>().knockback;
             Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
             //collision.gameObject.GetComponent<CharacterControll>().k = knock;
@@ -133,6 +142,8 @@ public class PotatoEnemy : MonoBehaviour
 
             Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
+            aud.clip = hurt;
+            aud.Play();
             move = false;
             Vector2 kbf = collision.gameObject.GetComponent<ball>().Knockback;
             Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
