@@ -27,6 +27,7 @@ public class PlayerDeath : MonoBehaviour
             if(Players == 0)
             {
                 openplayerDeath();
+                playerDeath = true;
 
             }
             
