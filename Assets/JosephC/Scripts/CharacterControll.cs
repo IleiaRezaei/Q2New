@@ -78,7 +78,7 @@ public class CharacterControll : MonoBehaviour
             arrow.transform.position = new Vector3(transform.position.x + Direction.normalized.x, transform.position.y + Direction.normalized.y, arrow.transform.position.z);
             arrow.transform.rotation = Quaternion.Euler (0,0,Mathf.Atan2(Direction.y, Direction.x) *Mathf.Rad2Deg);
             heldobj.GetComponent<Collider2D>().enabled = false;
-            heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 1.5F, transform.position.z);
             arrow.SetActive(true);
         }
         else

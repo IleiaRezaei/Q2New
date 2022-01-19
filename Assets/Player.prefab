@@ -121,6 +121,7 @@ MonoBehaviour:
   whoosh: {fileID: 8300000, guid: df76b765adf29f14ab15fe2fdb4acc1b, type: 3}
   hurt: {fileID: 8300000, guid: 9ec66b8a5c1806148a2898ad473b1760, type: 3}
   footstep: {fileID: 8300000, guid: 6b865f50473018b4f8bb930bcc478ac0, type: 3}
+  step: 0
   lm:
     serializedVersion: 2
     m_Bits: 256
@@ -5152,7 +5153,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.50439656, y: 0}
+  m_Offset: {x: 0.62613785, y: 0}
   m_Size: {x: 1.5363879, y: 2.4500313}
   m_Direction: 0
 --- !u!82 &5261991179656815651
