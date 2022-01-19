@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedPotatoExplosion : MonoBehaviour
+public class NEWRedPotato : MonoBehaviour
 {
     public int explosionDamage = 100;
     public bool isExploding;
@@ -17,11 +17,11 @@ public class RedPotatoExplosion : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        RigidBoy.GetComponent<Rigidbody2D>();
 
-        animRedPot = GetComponent<Animator>();
-
+        animRedPot = gameObject.GetComponent<Animator>();
         isExploding = false;
+
+        RigidBoy = GetComponent<Rigidbody2D>();
         //anim_RedPot.SetBool("RedExplode", false);
     }
 
@@ -32,7 +32,7 @@ public class RedPotatoExplosion : MonoBehaviour
         {
             //anim_RedPot.Play("Explosion");
             //animRedPot.SetBool("Explode", true);
-            animRedPot.SetBool("ex", true);
+            animRedPot.SetBool("Explode", true);
         }
 
         //Debug.Log(isExploding);
@@ -45,13 +45,13 @@ public class RedPotatoExplosion : MonoBehaviour
         {
             Debug.Log("Hi---------");
 
-            isExploding = true;
+            //isExploding = true;
+
             animRedPot.SetBool("Explode", true);
-            //anim_RedPot.SetBool("Explode", true);
             //animRedPot.Play("Explosion");
             //animRedPot.SetBool("isAttacking", false);
-
         }
     }
+
 
 }
