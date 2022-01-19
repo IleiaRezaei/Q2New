@@ -71,7 +71,7 @@ public class CharacterControll : MonoBehaviour
             aud.Play();
         }
         if (die){
-            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+            Destroy(this.gameObject);
         }
         if(heldobj != null)
         {
@@ -111,10 +111,17 @@ public class CharacterControll : MonoBehaviour
             {
                 if (Input.GetButtonDown("interact"))
                 {
-                    print("cummed");
                     NPC npcscripy = intercast.collider.GetComponent<NPC>();
                     textbox texscrp = texbox.GetComponent<textbox>();
                     texscrp.DoText(npcscripy.InterAct(), npcscripy.geticons(), npcscripy);
+                    if (holding)
+                    {
+                        anim_player.Play("IdleHold");
+                    }
+                    else
+                    {
+                        anim_player.Play("Idle");
+                    }
                 }
             }
         }
@@ -235,11 +242,11 @@ public class CharacterControll : MonoBehaviour
                     {
                         heldobj.transform.position = transform.position;
                         heldobj.GetComponent<Rigidbody2D>().velocity = Direction * 50;
-                        heldobj.GetComponent<ball>().damage = 100;
+
                         heldobj.GetComponent<Rigidbody2D>().angularVelocity = 2000 * Direction.x;
                         heldobj.GetComponent<Collider2D>().enabled = true;
                         heldobj.tag = "ThrownObj";
-                        heldobj.GetComponent<ball>().damage = 40;
+  
                         heldobj = null;
                         holding = false;
                         aud.clip = whoosh;
@@ -316,6 +323,10 @@ public class CharacterControll : MonoBehaviour
                 OnKnock(k);
 
 
+            }
+            if(collision.gameObject.tag == "RedPotatoDamage")
+            {
+                currentHP -= currentHP;
             }
         }
 

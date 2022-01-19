@@ -34,7 +34,7 @@ public class PotatoEnemy : MonoBehaviour
 
     public Vector2 knock;
 
-    public float potatoSpeed = 0.8f;
+    public float potatoSpeed = 0.85f;
     // Start is called before the first frame update
     void Start()
     {
@@ -155,6 +155,10 @@ public class PotatoEnemy : MonoBehaviour
             
             potatoSpeed *= 1.75f;
         }
+        if (collision.gameObject.tag == "RedPotatoDamage")
+        {
+            Destroy(me);
+        }
     }
 
     
@@ -169,6 +173,8 @@ public class PotatoEnemy : MonoBehaviour
         Debug.Log("==========================================");
 
         hitbox.enabled = false;
+
+
     }
 
     public void OnKnock(Vector2 knock)
