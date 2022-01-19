@@ -15,7 +15,11 @@ TagManager:
   - ThrownObj
   - RedPotato
   - nextScene
+<<<<<<< HEAD
   - RedExplosion
+=======
+  - RedPotatoActivator
+>>>>>>> 1759f15307eb893f00fb96f23448e8ae615b3724
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,8 @@ public class RedPotatoExplosion : MonoBehaviour
     public bool isExploding;
 
     private SpriteRenderer spriteRenderer;
-    private Animator anim_RedPot;
+
+    private Animator animRedPot;
 
     private Rigidbody2D RigidBoy;
 
@@ -17,32 +18,40 @@ public class RedPotatoExplosion : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         RigidBoy.GetComponent<Rigidbody2D>();
-        anim_RedPot = GetComponent<Animator>();
+
+        animRedPot = GetComponent<Animator>();
 
         isExploding = false;
-        anim_RedPot.SetBool("RedExplode", false);
+        //anim_RedPot.SetBool("RedExplode", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isExploding == true)
+        if (isExploding == true)
         {
-            anim_RedPot.Play("Explosion");
-
-            anim_RedPot.SetBool("RedExplode", true);
+            //anim_RedPot.Play("Explosion");
+            //animRedPot.SetBool("Explode", true);
+            animRedPot.SetBool("ex", true);
         }
+
+        //Debug.Log(isExploding);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        Debug.Log("--------------------------hit" + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hi");
+            Debug.Log("Hi---------");
 
             isExploding = true;
+            animRedPot.SetBool("Explode", true);
+            //anim_RedPot.SetBool("Explode", true);
+            //animRedPot.Play("Explosion");
+            //animRedPot.SetBool("isAttacking", false);
+
         }
     }
-
 
 }

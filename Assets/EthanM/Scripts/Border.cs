@@ -6,6 +6,7 @@ public class Border : MonoBehaviour
 {
     public GameObject Wall;
     public GameObject Wall2;
+    public GameObject Wall3;
     public GameObject[] Enemy;
     public int wallCount;
     //public List<GameObject> E;
@@ -30,9 +31,17 @@ public class Border : MonoBehaviour
                 wallCount++;
             }
         }
-        if(wallCount <= 1)
+        if (wallCount <= 10)
         {
             Destroy(Wall);
+        }
+        if (wallCount <= 6)
+        {
+            Destroy(Wall2);
+        }
+        if (wallCount <= 0)
+        {
+            Destroy(Wall3);
         }
     }
 }

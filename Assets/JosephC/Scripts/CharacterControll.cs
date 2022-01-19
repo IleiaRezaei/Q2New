@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CharacterControll : MonoBehaviour
 {
     public float MoveSpeed = 5000;
@@ -35,8 +35,15 @@ public class CharacterControll : MonoBehaviour
     private bool knockin;
     private GameObject arrow;
     private bool dead = false;
+    public bool die = false;
+    private AudioSource aud;
 
-    public GameObject deathScene;
+    public AudioClip whoosh;
+    public AudioClip hurt;
+    public AudioClip footstep;
+
+    public bool step;
+
 
     public LayerMask lm;
     // Start is called before the first frame update
@@ -51,17 +58,27 @@ public class CharacterControll : MonoBehaviour
         part = GetComponent<ParticleSystem>();
         hitbox.enabled = false;
         arrow = transform.GetChild(1).gameObject;
+        aud = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (step)
+        {
+            aud.clip = footstep;
+            aud.Play();
+        }
+        if (die){
+            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        }
         if(heldobj != null)
         {
             arrow.transform.position = new Vector3(transform.position.x + Direction.normalized.x, transform.position.y + Direction.normalized.y, arrow.transform.position.z);
             arrow.transform.rotation = Quaternion.Euler (0,0,Mathf.Atan2(Direction.y, Direction.x) *Mathf.Rad2Deg);
             heldobj.GetComponent<Collider2D>().enabled = false;
-            heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            heldobj.transform.position = new Vector3(transform.position.x, transform.position.y + 1.5F, transform.position.z);
             arrow.SetActive(true);
         }
         else
@@ -87,14 +104,11 @@ public class CharacterControll : MonoBehaviour
                 canmove = false;
                 dead = true;
                 anim_player.Play("die");
-                Time.timeScale = 0;
-                deathScene.SetActive(true);
         }
         if (intercast.collider != null && intercast.collider.tag != "Player")
         {
             if (intercast.collider)
             {
-                print("cum");
                 if (Input.GetButtonDown("interact"))
                 {
                     print("cummed");
@@ -129,6 +143,7 @@ public class CharacterControll : MonoBehaviour
                     {
                         anim_player.Play("Walk");
                     }
+
                 }
                 else
                 {
@@ -227,7 +242,9 @@ public class CharacterControll : MonoBehaviour
                         heldobj.GetComponent<ball>().damage = 40;
                         heldobj = null;
                         holding = false;
-                        
+                        aud.clip = whoosh;
+                        aud.Play();
+
                     }
                 }
                 else
@@ -236,11 +253,15 @@ public class CharacterControll : MonoBehaviour
                     {
                         damage = attack(false);
                         anim_player.Play("LightAtk");
+                        aud.clip = whoosh;
+                        aud.Play();
                     }
                     if (Input.GetButtonDown("Heavy"))
                     {
                         damage = attack(true);
                         anim_player.Play("HeavyAtk");
+                        aud.clip = whoosh;
+                        aud.Play();
                     }
                 }
             }
@@ -276,7 +297,7 @@ public class CharacterControll : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Dashing == false)
+        if (Dashing == false && dead == false)
         {
 
 
@@ -287,9 +308,11 @@ public class CharacterControll : MonoBehaviour
             }
             if (collision.gameObject.tag == "EnemyAttack")
             {
+                aud.clip = hurt;
+                aud.Play();
                 print(collision);
                 currentHP -= 20;
-                k = collision.gameObject.GetComponent<PotatoEnemy>().knock;
+                k = collision.transform.parent.gameObject.GetComponent<PotatoEnemy>().knock;
                 OnKnock(k);
 
 

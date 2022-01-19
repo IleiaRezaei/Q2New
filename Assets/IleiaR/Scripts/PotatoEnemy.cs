@@ -27,12 +27,19 @@ public class PotatoEnemy : MonoBehaviour
     public CapsuleCollider2D hitbox;
     public Rigidbody2D RigidBoy;
 
+    private AudioSource aud;
+
+    public AudioClip hurt;
+    public AudioClip attack;
+
     public Vector2 knock;
 
     public float potatoSpeed = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
+
         RigidBoy = GetComponent<Rigidbody2D>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -55,11 +62,12 @@ public class PotatoEnemy : MonoBehaviour
             move = true;
         }
         directionBetween = me.transform.position - player.transform.position;
-        if (move)
+        print(Mathf.Abs(directionBetween.x));
+        if (move && Mathf.Abs(directionBetween.x) <= 10)
         {
             transform.position -= new Vector3(directionBetween.normalized.x, directionBetween.normalized.y, 0) * potatoSpeed * Time.deltaTime;
         }
-        knock = directionBetween.normalized * 50000;
+        knock = directionBetween.normalized * -2500;
         if (isAttacking == true)
         {
             anim_potato.SetBool("isAttacking", true);
@@ -117,6 +125,8 @@ public class PotatoEnemy : MonoBehaviour
             Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
             move = false;
+            aud.clip = hurt;
+            aud.Play();
             Vector2 kbf = player.GetComponent<CharacterControll>().knockback;
             Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
             //collision.gameObject.GetComponent<CharacterControll>().k = knock;
@@ -132,6 +142,8 @@ public class PotatoEnemy : MonoBehaviour
 
             Debug.Log("|||||||||||||||||||||||||||||||||||||isGettingAttacked|||||||||||||||||||||||||||||||||||");
 
+            aud.clip = hurt;
+            aud.Play();
             move = false;
             Vector2 kbf = collision.gameObject.GetComponent<ball>().Knockback;
             Debug.Log("KBF:::::::" + kbf.x + "    " + kbf.y);
