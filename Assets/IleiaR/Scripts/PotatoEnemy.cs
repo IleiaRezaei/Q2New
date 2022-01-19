@@ -34,7 +34,7 @@ public class PotatoEnemy : MonoBehaviour
 
     public Vector2 knock;
 
-    public float potatoSpeed = 0.8f;
+    public float potatoSpeed = 0.85f;
     // Start is called before the first frame update
     void Start()
     {
