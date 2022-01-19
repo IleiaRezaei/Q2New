@@ -3016,6 +3016,53 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1007204749}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1008836923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1008836924}
+  - component: {fileID: 1008836925}
+  m_Layer: 0
+  m_Name: RedExplosion
+  m_TagString: RedExplosion
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1008836924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008836923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1642319730}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1008836925
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008836923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07978066, y: 0.58503395}
+  m_Size: {x: 6.61625, y: 5.4461894}
+  m_Direction: 1
 --- !u!1 &1042059137
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,6 +4132,12 @@ Transform:
 --- !u!1 &1642319724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8859755262292737662, guid: 3685165357de705459c3b35a6eea7520,
+    type: 3}
+  m_PrefabInstance: {fileID: 940003145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1642319730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8859755262292737656, guid: 3685165357de705459c3b35a6eea7520,
     type: 3}
   m_PrefabInstance: {fileID: 940003145}
   m_PrefabAsset: {fileID: 0}
