@@ -30,9 +30,13 @@ public class Border : MonoBehaviour
                 wallCount++;
             }
         }
-        if(wallCount <= 1)
+        if (wallCount <= 4)
         {
             Destroy(Wall);
+        }
+        if (wallCount <= 0)
+        {
+            Destroy(Wall2);
         }
     }
 }
