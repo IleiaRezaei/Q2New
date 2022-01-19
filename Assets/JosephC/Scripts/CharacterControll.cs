@@ -71,7 +71,7 @@ public class CharacterControll : MonoBehaviour
             aud.Play();
         }
         if (die){
-            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+            Destroy(this.gameObject);
         }
         if(heldobj != null)
         {
@@ -111,10 +111,17 @@ public class CharacterControll : MonoBehaviour
             {
                 if (Input.GetButtonDown("interact"))
                 {
-                    print("cummed");
                     NPC npcscripy = intercast.collider.GetComponent<NPC>();
                     textbox texscrp = texbox.GetComponent<textbox>();
                     texscrp.DoText(npcscripy.InterAct(), npcscripy.geticons(), npcscripy);
+                    if (holding)
+                    {
+                        anim_player.Play("IdleHold");
+                    }
+                    else
+                    {
+                        anim_player.Play("Idle");
+                    }
                 }
             }
         }
