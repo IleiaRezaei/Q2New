@@ -767,12 +767,12 @@ PrefabInstance:
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.4
+      value: 69.58
       objectReference: {fileID: 0}
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
@@ -3552,6 +3552,8 @@ MonoBehaviour:
   - '{"Text":"The Green Potato will always chase and attack you","Icon":0}'
   - '{"Text":"Light attack with O and heavy attack with P. You can also use the mouse.
     You can also use mouse!. And space to dash.","Icon":0}'
+  - '{"Text":"You''ve always had the fastest dash around, no body can hit you when
+    you dash so use it offensively","Icon":0} '
   - '{"Text":"Eat the red beans by going over it for health","Icon":0}'
   - '{"Text":"You can also pick up Slimes using light attack button ","Icon":0}'
   - '{"Text":"Thats all you need for now, go ahead and save the Fortnite champ!","Icon":0}'
@@ -4859,6 +4861,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610921, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610921, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7418546962127610924, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
@@ -7820,12 +7832,12 @@ PrefabInstance:
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78.13
+      value: 45.87
       objectReference: {fileID: 0}
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 7218428474908668337, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
@@ -8010,6 +8022,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610921, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610921, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7418546962127610924, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
