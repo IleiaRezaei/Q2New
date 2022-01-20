@@ -58,9 +58,9 @@ public class boss : MonoBehaviour
             if (go == false)
             {
                 anim.Play("roar");
-                GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x,0,0), Quaternion.Euler(0, 0, 0));
+                GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x + 5,0,0), Quaternion.Euler(0, 0, 0));
                 obj1.tag = "Ben";
-                GameObject obj2 = Instantiate(redpotat, new Vector3(transform.position.x -10, 0, 0), Quaternion.Euler(0, 0, 0));
+                GameObject obj2 = Instantiate(redpotat, new Vector3(transform.position.x -5, 0, 0), Quaternion.Euler(0, 0, 0));
                 roll = true;
                 go = true;
                 
@@ -92,8 +92,7 @@ public class boss : MonoBehaviour
     {
         if (collision.gameObject.tag == "RedPotatoDamage")
         {
-            int dam = 20;
-            hp -= dam;
+            hp -= 40;
 
             if (hp <= 0)
             {
