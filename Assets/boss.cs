@@ -106,10 +106,10 @@ public class boss : MonoBehaviour
         if (collision.gameObject.tag == "RedPotatoDamage")
         {
             hp -= 40;
-
+            anim.Play("hurt");
             if (hp <= 0)
             {
-                anim.Play("hurt");
+                
                 dead = true;
             }
         }
