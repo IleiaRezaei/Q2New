@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class boss : MonoBehaviour
 {
     public int hp = 200;
-    public int attack = 0;
+    public int attack = 1;
     public bool dead;
     public bool attacking;
     private Animator anim;
@@ -23,6 +23,7 @@ public class boss : MonoBehaviour
     private int es;
     private AudioSource aud;
     public AudioClip puke;
+    public AudioClip yell;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,7 @@ public class boss : MonoBehaviour
         {
             
             go = false;
-            if(timer >= 5)
+            if(timer >= 2)
             {
                 attack = Random.Range(1,3);
                 timer = 0;
@@ -65,6 +66,8 @@ public class boss : MonoBehaviour
         {
             if (go == false)
             {
+                aud.clip = yell;
+                aud.Play();
                 anim.Play("roar");
                 GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x + 5,0,0), Quaternion.Euler(0, 0, 0));
                 obj1.tag = "Ben";
@@ -103,9 +106,10 @@ public class boss : MonoBehaviour
         if (collision.gameObject.tag == "RedPotatoDamage")
         {
             hp -= 40;
-
+            anim.Play("hurt");
             if (hp <= 0)
             {
+                
                 dead = true;
             }
         }
