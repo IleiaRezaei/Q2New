@@ -9087,9 +9087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-  - '{"Text":"Thats Bobba''s brother, bobby right there","Icon":3}'
-  - '{"Text":"Ive only seen him flinch at explosions...","Icon":3}'
-  - '{"Text":"Good luck... You''re gonna need it ","Icon":4}'
+  - '{"Text":"Thats Bobby''s brother, Bubba right there","Icon":2}'
+  - '{"Text":"Ive only seen him flinch at explosions...","Icon":1}'
+  - '{"Text":"Good luck... You''re gonna need it ","Icon":3}'
   icons:
   - {fileID: 21300000, guid: b07159b6dca7958428997e5cf4891b1e, type: 3}
   - {fileID: 21300000, guid: 3389e1b4ba0102f419a21c30ed9e80f1, type: 3}
