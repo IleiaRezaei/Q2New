@@ -6,7 +6,7 @@ using UnityEngine;
 public class boss : MonoBehaviour
 {
     public int hp;
-    public int attack = 0;
+    public float attack = 0;
     public bool dead;
     public bool attacking;
     private Animator anim;
@@ -15,6 +15,7 @@ public class boss : MonoBehaviour
     public GameObject redpotat;
     public GameObject greenpotat;
     public GameObject slime;
+    public bool roll;
     IEnumerator coroutine;
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,24 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (roll)
+        {
+            attack = 0;
+        }
         if(attack == 0)
         {
-            anim.Play("idle");
+            
             go = false;
+            if(timer >= 5)
+            {
+                attack = 1;
+                timer = 0;
+            }
+            else
+            {
+                anim.Play("idle");
+                timer += Time.deltaTime;
+            }
         }
         if(attack == 1)
         {
@@ -38,6 +53,7 @@ public class boss : MonoBehaviour
         {
             if (go == false)
             {
+                anim.Play("attack");
                 GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
                 obj1.GetComponent<slime>().move = true;
                 GameObject obj2 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 45));
@@ -46,7 +62,8 @@ public class boss : MonoBehaviour
                 obj3.GetComponent<slime>().move = true;
                 go = true;
             }
-            anim.Play("attack");
+            
+            
         }
 
     }

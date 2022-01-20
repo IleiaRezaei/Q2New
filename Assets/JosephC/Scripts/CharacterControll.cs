@@ -334,6 +334,10 @@ public class CharacterControll : MonoBehaviour
             {
                 currentHP -= currentHP;
             }
+            if (collision.gameObject.tag == "slime")
+            {
+                currentHP -= 10;
+            }
         }
 
     }
