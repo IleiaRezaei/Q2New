@@ -34,7 +34,7 @@ public class RedPotatoExplosion : MonoBehaviour
 
         isExploding = false;
         //anim_RedPot.SetBool("RedExplode", false);
-        //StartCoroutine(waitForSeconds());
+        //StartCoroutine(WaitForSeconds());
         //StartCoroutine(waituntilExplode());
 
     }
@@ -49,11 +49,12 @@ public class RedPotatoExplosion : MonoBehaviour
             animRedPot.SetBool("ex", true);
             animRedPot.SetBool("hasWaited", true);
             GetComponent<Rigidbody2D>().freezeRotation = true;
-            StartCoroutine(WaitForSeconds());
+            StartCoroutine("WaitForSeconds");
+            //WaitForSeconds();
         }
         if (die)
         {
-            WaitForSeconds()
+            //waituntilExplode();
             Destroy(me);
         }
         //Debug.Log(isExploding);
@@ -110,7 +111,7 @@ public class RedPotatoExplosion : MonoBehaviour
     }
     IEnumerator WaitForSeconds()
     {
-        yield return new WaitForSeconds((int)6.0);
+        yield return new WaitForSeconds((int)3.1);
         child.SetActive(true);
     }
 
