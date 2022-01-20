@@ -4685,6 +4685,8 @@ MonoBehaviour:
   wall1: {fileID: 123909448}
   wall2: {fileID: 1422291759}
   boss: {fileID: 1189117484}
+  sm: {fileID: 917851225}
+  bm: {fileID: 8300000, guid: d9bcfca6a15ebb2498ccb609a4edb797, type: 3}
 --- !u!61 &1265073711
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -21,9 +21,12 @@ public class boss : MonoBehaviour
     public GameObject[] enmys;
     public bool on;
     private int es;
+    private AudioSource aud;
+    public AudioClip puke;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
@@ -75,6 +78,8 @@ public class boss : MonoBehaviour
             {
                 if (go == false)
                 {
+                    aud.clip = puke;
+                    aud.Play();
                     anim.Play("attack");
                     GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
                     obj1.GetComponent<slime>().move = true;
