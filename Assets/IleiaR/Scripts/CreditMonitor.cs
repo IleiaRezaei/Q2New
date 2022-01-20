@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CreditMonitor : MonoBehaviour
 {
-    private static int nScreens = 7;
+    private static int nScreens = 8;
     private GameObject[] creditScenes = new GameObject[nScreens];
     private static int swapCount = 0;
 
@@ -19,9 +19,11 @@ public class CreditMonitor : MonoBehaviour
         creditScenes[4] = GameObject.Find("Credits5");
         creditScenes[5] = GameObject.Find("Credits6");
         creditScenes[6] = GameObject.Find("Credits7");
+        creditScenes[7] = GameObject.Find("Credit8");
+        
 
         //Turn all scenes off
-        for(int i = 0; i < nScreens; i++)
+        for (int i = 0; i < nScreens; i++)
         {
             creditScenes[i].SetActive(false);
         }
