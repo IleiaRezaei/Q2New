@@ -22,7 +22,7 @@ public class RedPotatoExplosion : MonoBehaviour
 
     public int waitFor;
 
-    public bool die = false;
+    public bool die;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class RedPotatoExplosion : MonoBehaviour
         isExploding = false;
         //anim_RedPot.SetBool("RedExplode", false);
         StartCoroutine(waitForSeconds());
-        StartCoroutine(waituntilExplode());
+        //StartCoroutine(waituntilExplode());
 
 
 
