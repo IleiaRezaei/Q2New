@@ -210,6 +210,7 @@ MonoBehaviour:
   me: {fileID: 4338569733345317507}
   waitFor: 0
   die: 0
+  explo: {fileID: 8300000, guid: ccc2859b33aded64da250f6a4575fed2, type: 3}
 --- !u!82 &1251247320510701472
 AudioSource:
   m_ObjectHideFlags: 0

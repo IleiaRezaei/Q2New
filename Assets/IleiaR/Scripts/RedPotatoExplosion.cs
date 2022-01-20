@@ -23,10 +23,15 @@ public class RedPotatoExplosion : MonoBehaviour
     public int waitFor;
 
     public bool die;
+    public bool ding;
+
+    private AudioSource aud;
+    public AudioClip explo;
 
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         RigidBoy = GetComponent<Rigidbody2D>();
 
@@ -44,6 +49,12 @@ public class RedPotatoExplosion : MonoBehaviour
     {
         if (isExploding == true)
         {
+            if (ding)
+            {
+                aud.clip = explo;
+                aud.Play();
+            }
+
             //anim_RedPot.Play("Explosion");
             //animRedPot.SetBool("Explode", true);
             animRedPot.SetBool("ex", true);
