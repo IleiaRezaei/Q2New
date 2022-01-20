@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class QuitLevel : MonoBehaviour
 {
+
     //public bool pausemenu;
     //public GameObject pause;
-    //public GameObject pausemenumenu;
-    
+    public GameObject pausemenumenu;
+    public void Closepausemenu()
+    {
+        pausemenumenu.SetActive(false);
+        Time.timeScale = 1;
+    }
 
     public void LoadNextScene()
     {

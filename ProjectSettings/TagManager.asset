@@ -4,18 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PlayerAttack
-  - regularBean
+  - Wall
+  - RedPotatoActivator
   - NPC
+  - nextScene
   - Enemy
   - EnemyAttack
-  - startButton
-  - Wall
-  - PotatoParent
-  - ThrownObj
-  - RedPotato
-  - nextScene
-  - RedPotatoActivator
+  - regularBean
+  - PlayerAttack
+  - RedPotatoDamage
   layers:
   - Default
   - TransparentFX
@@ -25,11 +22,11 @@ TagManager:
   - UI
   - 
   - 
-  - NPC
-  - Obstacle
-  - Wall
-  - Enemy
-  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
