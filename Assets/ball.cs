@@ -51,9 +51,9 @@ public class ball : MonoBehaviour
         {
             tag = "Untagged";
         }
-        if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
-        {
-            Destroy(me);
-        }
+        //if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
+        //{
+        //    Destroy(me);
+        //}
     }
 }
