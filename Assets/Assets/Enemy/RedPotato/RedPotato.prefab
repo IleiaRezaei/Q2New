@@ -41,7 +41,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07363037, y: 0.23983957}
@@ -210,6 +210,7 @@ MonoBehaviour:
   me: {fileID: 4338569733345317507}
   waitFor: 0
   die: 0
+  ding: 0
   explo: {fileID: 8300000, guid: ccc2859b33aded64da250f6a4575fed2, type: 3}
 --- !u!82 &1251247320510701472
 AudioSource:

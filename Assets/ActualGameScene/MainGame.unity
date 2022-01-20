@@ -5078,6 +5078,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4338569733345317507, guid: d0d31ae980225ff4c815044a6fb34eb1,
         type: 3}
       propertyPath: m_Name
