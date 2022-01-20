@@ -6,11 +6,12 @@ using UnityEngine;
 public class boss : MonoBehaviour
 {
     public int hp;
-    public float attack = 0;
+    public int attack = 0;
     public bool dead;
     public bool attacking;
     private Animator anim;
     public float timer;
+    private int lastattack;
     public bool go;
     public GameObject redpotat;
     public GameObject greenpotat;
@@ -29,6 +30,7 @@ public class boss : MonoBehaviour
         if (roll)
         {
             attack = 0;
+            roll = false;
         }
         if(attack == 0)
         {
@@ -36,7 +38,7 @@ public class boss : MonoBehaviour
             go = false;
             if(timer >= 5)
             {
-                attack = 1;
+                attack = Random.Range(1,3);
                 timer = 0;
             }
             else
@@ -47,7 +49,12 @@ public class boss : MonoBehaviour
         }
         if(attack == 1)
         {
-            anim.Play("roar");
+            if (go == false)
+            {
+                anim.Play("roar");
+                GameObject obj1 = Instantiate(greenpotat);
+                go = true;
+            }
         }
         if(attack == 2)
         {
