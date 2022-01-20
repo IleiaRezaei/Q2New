@@ -3732,8 +3732,8 @@ MonoBehaviour:
   text:
   - '{"Text":"hey, I''m Beanson","Icon":0}'
   - '{"Text":"The Green Potato will always chase and attack you","Icon":0}'
-  - '{"Text":"Light attack with O and heavy attack with P. You can also use the mouse.
-    You can also use mouse!. And space to dash.","Icon":0}'
+  - '{"Text":"Light attack with O and heavy attack with P. You can also use mouse!
+    And space to dash.","Icon":0}'
   - '{"Text":"You''ve always had the fastest dash around, no body can hit you when
     you dash so use it offensively","Icon":0} '
   - '{"Text":"Eat the red beans by going over it for health","Icon":0}'
@@ -7314,7 +7314,7 @@ MonoBehaviour:
   text:
   - '{"Text":"Please help me pinto!                                    E for next","Icon":0}'
   - '{"Text":"My brother was taken, he was just about play in a professional fortnite
-    tournament.!","Icon":1}'
+    tournament!","Icon":1}'
   - '{"Text":"How can I help Bobba?","Icon":7}'
   - '{"Text":"He went to check on the increase in radiation because it was affecting
     his ping! But he was taken","Icon":1}'
