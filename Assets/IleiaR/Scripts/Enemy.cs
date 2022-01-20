@@ -71,6 +71,10 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+        if (collision.gameObject.tag == "RedPotatoDamage")
+        {
+            Destroy(transform.parent.gameObject);
+        }
     }
 }
 //

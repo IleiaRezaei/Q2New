@@ -34,10 +34,8 @@ public class RedPotatoExplosion : MonoBehaviour
 
         isExploding = false;
         //anim_RedPot.SetBool("RedExplode", false);
-        StartCoroutine(waitForSeconds());
+        //StartCoroutine(waitForSeconds());
         //StartCoroutine(waituntilExplode());
-
-
 
     }
 
@@ -63,11 +61,12 @@ public class RedPotatoExplosion : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("--------------------------hit" + collision.gameObject.tag);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerAttack")
         {
             Debug.Log("Hi---------");
 
             isExploding = true;
+            waitForSeconds();
             //animRedPot.SetBool("Explode", true);
             //anim_RedPot.SetBool("Explode", true);
             //animRedPot.Play("Explosion");
@@ -75,8 +74,8 @@ public class RedPotatoExplosion : MonoBehaviour
 
             //yield return new WaitForSeconds(5);
             //Debug.Log("))))))))))((((((((((((((((())))))))))))))((((((((((((((((((((ANIMATIONPLAYED");
-            waitForSeconds();
             //waituntilExplode();
+
         }
 
 
@@ -95,6 +94,7 @@ public class RedPotatoExplosion : MonoBehaviour
                     RigidBoy.angularDrag = 0.5F;
                     collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().heldobj = this.gameObject;
                     collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding = true;
+                    isExploding = true;
                 }
             }
         }
@@ -102,16 +102,20 @@ public class RedPotatoExplosion : MonoBehaviour
         {
             //tag = "Untagged";
         }
+        if (collision.gameObject.tag == "Ball")
+        {
+            animRedPot.SetBool("HitByBall", true);
+        }
     }
     IEnumerator waitForSeconds()
     {
-        yield return new WaitForSeconds((int)4.5);
+        yield return new WaitForSeconds((int)6.5);
         child.SetActive(true);
     }
 
-    IEnumerator waituntilExplode()
-    {
-        yield return new WaitForSeconds(5);
-        
-    }
+    //IEnumerator waituntilExplode()
+    //{
+    //    yield return new WaitForSeconds(5);
+
+    //}
 }
