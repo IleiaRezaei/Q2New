@@ -250,6 +250,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoEnemyA_ 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22674c30c6d0f754598e75e3493ec145, type: 3}
 --- !u!4 &123371692 stripped
@@ -914,6 +924,11 @@ PrefabInstance:
       propertyPath: texbox
       value: 
       objectReference: {fileID: 187926889}
+    - target: {fileID: 7796969123715700273, guid: 79feaf24109e9084dba6ea3657171dd7,
+        type: 3}
+      propertyPath: playerKnockback
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7894098545258738930, guid: 79feaf24109e9084dba6ea3657171dd7,
         type: 3}
       propertyPath: m_Enabled
@@ -3553,6 +3568,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: player
@@ -4454,6 +4474,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoEnemyA_ 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22674c30c6d0f754598e75e3493ec145, type: 3}
 --- !u!1 &910306405
@@ -6042,6 +6072,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: player
@@ -8715,6 +8750,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoEnemyA_ 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
+    - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22674c30c6d0f754598e75e3493ec145, type: 3}
 --- !u!1 &1635226484 stripped
@@ -8953,6 +8998,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610960, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1013732972}
     - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
       propertyPath: player
