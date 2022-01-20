@@ -4235,6 +4235,7 @@ MonoBehaviour:
   greenpotat: {fileID: 1635226484}
   slime: {fileID: 1557203217}
   roll: 0
+  enmys: []
 --- !u!212 &1189117487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6221,7 +6222,7 @@ GameObject:
   - component: {fileID: 1557203222}
   m_Layer: 0
   m_Name: ball_slime
-  m_TagString: slime
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6566,6 +6567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PotatoEnemyA_ 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610920, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418546962127610921, guid: 22674c30c6d0f754598e75e3493ec145,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7418546962127610962, guid: 22674c30c6d0f754598e75e3493ec145,
         type: 3}
