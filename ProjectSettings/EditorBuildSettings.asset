@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ActualGameScene/RadiatedScene.unity
     guid: 7a9cbd71346c8e242bb765ab8ec2df94
+  - enabled: 1
+    path: Assets/ActualGameScene/FinalCutscene.unity
+    guid: a9dfbb6b5004fbc4093e3b29279aada4
   m_configObjects: {}
