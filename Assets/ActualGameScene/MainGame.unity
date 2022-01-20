@@ -4211,7 +4211,7 @@ MonoBehaviour:
   - '{"Text":"You see that cave? Thats a no man zone","Icon":0}'
   - '{"Text":"Once you go in, theres no coming back","Icon":0}'
   - '{"Text":"The radiation is so bad, you can become ONE OF THEM!","Icon":2}'
-  - '{"Text":"But if you want to save Bubba''s brother, you have to go in...","Icon":2}'
+  - '{"Text":"But if you want to save Bobby''s brother, you have to go in...","Icon":2}'
   icons:
   - {fileID: 21300000, guid: b07159b6dca7958428997e5cf4891b1e, type: 3}
   - {fileID: 21300000, guid: 535483b716445ae4895d2eb4ac8ae654, type: 3}
