@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public bool playerDeath;
-    public GameObject playerDeathScene;
+    public bool playerDeathMenu;
+    public GameObject PlayerDeathScene;
     public GameObject[] Player;
     public int Players;
     void Start()
@@ -24,19 +24,20 @@ public class PlayerDeath : MonoBehaviour
             {
                 Players++;
             }
-            if(Players == 0)
-            {
-                openplayerDeath();
-                playerDeath = true;
-
-            }
+            
             
         }
+        if (Players <= 0)
+        {
+            openplayerDeath();
+            playerDeathMenu = true;
 
+        }
     }
     public void openplayerDeath()
     {
-        playerDeathScene.SetActive(true);
+        Time.timeScale = 0;
+        PlayerDeathScene.SetActive(true);
     }
 }
 
