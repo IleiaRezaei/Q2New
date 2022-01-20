@@ -15,6 +15,7 @@ TagManager:
   - RedPotatoDamage
   - RedPotato
   - Ball
+  - slime
   layers:
   - Default
   - TransparentFX
