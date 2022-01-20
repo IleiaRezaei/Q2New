@@ -44,6 +44,7 @@ public class ball : MonoBehaviour
                 Rigidboy.angularDrag = 0.5F;
                 collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().heldobj = this.gameObject;
                 collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().holding = true;
+                collision.gameObject.transform.parent.gameObject.GetComponent<CharacterControll>().ball = true;
             }
         }
         else

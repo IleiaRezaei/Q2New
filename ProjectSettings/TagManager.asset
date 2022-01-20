@@ -13,6 +13,8 @@ TagManager:
   - regularBean
   - PlayerAttack
   - RedPotatoDamage
+  - RedPotato
+  - Ball
   layers:
   - Default
   - TransparentFX

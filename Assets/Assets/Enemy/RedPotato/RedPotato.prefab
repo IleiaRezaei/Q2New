@@ -44,8 +44,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04192777, y: 0.42976958}
-  m_Size: {x: 7.12169, y: 5.1300635}
+  m_Offset: {x: 0.07363037, y: 0.23983957}
+  m_Size: {x: 9.006792, y: 5.51002}
   m_Direction: 1
 --- !u!1 &4338569733345317507
 GameObject:
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 4338569733345317561}
   m_Layer: 0
   m_Name: RedPotato
-  m_TagString: Untagged
+  m_TagString: RedPotato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,8 +187,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32425702, y: -0.027021408}
-  m_Size: {x: 2.2701428, y: 3.0778718}
+  m_Offset: {x: -0.22928882, y: -0.027021408}
+  m_Size: {x: 2.0802064, y: 3.0778718}
   m_Direction: 0
 --- !u!114 &4338569733345317561
 MonoBehaviour:
