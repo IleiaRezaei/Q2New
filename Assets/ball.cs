@@ -9,6 +9,8 @@ public class ball : MonoBehaviour
     public Vector2 Knockback;
     private Rigidbody2D Rigidboy;
     public bool held;
+
+    public GameObject me;
     private void Start()
     {
         Rigidboy = GetComponent<Rigidbody2D>();
@@ -47,6 +49,10 @@ public class ball : MonoBehaviour
         else
         {
             tag = "Untagged";
+        }
+        if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
+        {
+            Destroy(me);
         }
     }
 }
