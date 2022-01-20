@@ -336,7 +336,10 @@ public class CharacterControll : MonoBehaviour
             }
             if (collision.gameObject.tag == "slime")
             {
+                aud.clip = hurt;
+                aud.Play();
                 currentHP -= 10;
+                OnKnock(new Vector2(0,-1) *  5);
             }
         }
 

@@ -17,7 +17,7 @@ public class boss : MonoBehaviour
     public GameObject greenpotat;
     public GameObject slime;
     public bool roll;
-    IEnumerator coroutine;
+    public GameObject[] enmys;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +29,11 @@ public class boss : MonoBehaviour
     {
         if (roll)
         {
-            attack = 0;
-            roll = false;
+            if (enmys.Length == 0)
+            {
+                attack = 0;
+                roll = false;
+            }
         }
         if(attack == 0)
         {
@@ -53,7 +56,8 @@ public class boss : MonoBehaviour
             {
                 anim.Play("roar");
                 GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x,0,0), Quaternion.Euler(0, 0, 0));
-                Instantiate(redpotat, new Vector3(transform.position.x -10, 0, 0), Quaternion.Euler(0, 0, 0));
+                GameObject obj2 = Instantiate(redpotat, new Vector3(transform.position.x -10, 0, 0), Quaternion.Euler(0, 0, 0));
+                enmys = new GameObject[] { obj1, obj2 };
 
                 go = true;
             }
