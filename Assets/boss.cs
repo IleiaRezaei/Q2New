@@ -12,46 +12,43 @@ public class boss : MonoBehaviour
     private Animator anim;
     public float timer;
     public bool go;
+    public GameObject redpotat;
+    public GameObject greenpotat;
+    public GameObject slime;
     IEnumerator coroutine;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        attack = Random.Range(1, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (dead == false)
+        if(attack == 0)
         {
-
-            anim.SetInteger("attack", attack);
-            if (attack == 0)
-            {
-                if (go == false)
-                {
-                    StartCoroutine(waitForSeconds());
-                    attack = Random.Range(1, 2);
-                }
-                
-            }
-            if (attack == 1)
-            {
-                if (attacking)
-                {
-                    attacking = false;
-                }
-            }
-            if (attack == 2)
-            {
-                if (attacking)
-                {
-                    attacking = false;
-                }
-            }
+            anim.Play("idle");
+            go = false;
         }
+        if(attack == 1)
+        {
+            anim.Play("roar");
+        }
+        if(attack == 2)
+        {
+            if (go == false)
+            {
+                GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
+                obj1.GetComponent<slime>().move = true;
+                GameObject obj2 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 45));
+                obj2.GetComponent<slime>().move = true;
+                GameObject obj3 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, -45));
+                obj3.GetComponent<slime>().move = true;
+                go = true;
+            }
+            anim.Play("attack");
+        }
+
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,14 +62,5 @@ public class boss : MonoBehaviour
                 dead = true;
             }
         }
-    }
-    IEnumerator waitForSeconds()
-    {
-        print("yo0");
-        go = true;
-        yield return new WaitForSeconds(5);
-        print("yo1");
-
-        
     }
 }
