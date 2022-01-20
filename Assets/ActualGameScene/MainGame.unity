@@ -4112,7 +4112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text:
   - '{"Text":"I''m back, you didnt expect me huh?","Icon":0}'
-  - '{"Text":"It''s sirt if friendly, unless you attack it. ","Icon":2}'
+  - '{"Text":"You see the Red potato? It''s sort of friendly, unless you attack it.
+    ","Icon":2}'
   - '{"Text":"But if you attack or pick it up, it can explode ","Icon":0}'
   - '{"Text":"So if you do attack or pick it up, you can throw it, like a slime ball
     ","Icon":0}'
