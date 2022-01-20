@@ -44,6 +44,7 @@ public class CharacterControll : MonoBehaviour
 
     public bool step;
 
+    public bool ball;
 
     public LayerMask lm;
     // Start is called before the first frame update
@@ -245,8 +246,13 @@ public class CharacterControll : MonoBehaviour
 
                         heldobj.GetComponent<Rigidbody2D>().angularVelocity = 2000 * Direction.x;
                         heldobj.GetComponent<Collider2D>().enabled = true;
-                        heldobj.tag = "ThrownObj";
-  
+                        if (ball)
+                        {
+                            heldobj.tag = "ThrownObj";
+                            heldobj.GetComponent<ball>().damage = 40;
+                            heldobj.GetComponent<ball>().held = false;
+                            ball = false;
+                        }
                         heldobj = null;
                         holding = false;
                         aud.clip = whoosh;
