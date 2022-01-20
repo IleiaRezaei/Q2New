@@ -18,6 +18,7 @@ public class boss : MonoBehaviour
     public GameObject slime;
     public bool roll;
     public GameObject[] enmys;
+    public bool on;
     private int es;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(dead == false && on) {
         if (roll)
         {
             if (GameObject.FindGameObjectsWithTag("slime").Length == 0 && GameObject.FindGameObjectsWithTag("Ben").Length == 0)
@@ -64,25 +66,25 @@ public class boss : MonoBehaviour
                 
             }
         }
-        if(attack == 2)
-        {
-            if (go == false)
+            if (attack == 2)
             {
-                anim.Play("attack");
-                GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
-                obj1.GetComponent<slime>().move = true;
-                obj1.tag = "slime";
-                GameObject obj2 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 45));
-                obj2.GetComponent<slime>().move = true;
-                obj2.tag = "slime";
-                GameObject obj3 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, -45));
-                obj3.GetComponent<slime>().move = true;
-                obj3.tag = "slime";
-                roll = true;
-                go = true;
+                if (go == false)
+                {
+                    anim.Play("attack");
+                    GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
+                    obj1.GetComponent<slime>().move = true;
+                    obj1.tag = "slime";
+                    GameObject obj2 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 45));
+                    obj2.GetComponent<slime>().move = true;
+                    obj2.tag = "slime";
+                    GameObject obj3 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, -45));
+                    obj3.GetComponent<slime>().move = true;
+                    obj3.tag = "slime";
+                    roll = true;
+                    go = true;
+                }
+
             }
-            
-            
         }
 
     }
