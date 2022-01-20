@@ -30,7 +30,7 @@ public class RadiationBorder : MonoBehaviour
                 wallCount++;
             }
         }
-        if (wallCount <= 6)
+        if (wallCount <= 3)
         {
             Destroy(Wall);
         }
