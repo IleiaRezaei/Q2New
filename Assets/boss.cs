@@ -23,6 +23,7 @@ public class boss : MonoBehaviour
     private int es;
     private AudioSource aud;
     public AudioClip puke;
+    public AudioClip yell;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +66,8 @@ public class boss : MonoBehaviour
         {
             if (go == false)
             {
+                aud.clip = yell;
+                aud.Play();
                 anim.Play("roar");
                 GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x + 5,0,0), Quaternion.Euler(0, 0, 0));
                 obj1.tag = "Ben";
@@ -106,6 +109,7 @@ public class boss : MonoBehaviour
 
             if (hp <= 0)
             {
+                anim.Play("hurt");
                 dead = true;
             }
         }

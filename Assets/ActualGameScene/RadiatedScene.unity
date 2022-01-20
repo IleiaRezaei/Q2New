@@ -4545,7 +4545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2746359b90fd7d42a0fef28776a209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 200
   attack: 0
   dead: 0
   attacking: 0
@@ -4558,6 +4558,7 @@ MonoBehaviour:
   enmys: []
   on: 0
   puke: {fileID: 8300000, guid: 5203ac912d46a0d498002853951f55a8, type: 3}
+  yell: {fileID: 8300000, guid: d05ba47778d66f14aa7d964f38e2991f, type: 3}
 --- !u!212 &1189117487
 SpriteRenderer:
   m_ObjectHideFlags: 0
