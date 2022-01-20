@@ -54,12 +54,7 @@ public class ball : MonoBehaviour
         {
             tag = "Untagged";
         }
-<<<<<<< HEAD
-        //if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
-        //{
-        //    Destroy(me);
-        //}
-=======
+
         if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
         {
             StartCoroutine(WaitForSeconds());
@@ -70,6 +65,5 @@ public class ball : MonoBehaviour
         {
             yield return new WaitForSeconds((int)1.1);
         }
->>>>>>> 4a5fe438d5e5293558e1d1b39b1b42b1a16d814e
     }
 }
