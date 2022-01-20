@@ -18,6 +18,7 @@ public class boss : MonoBehaviour
     public GameObject slime;
     public bool roll;
     public GameObject[] enmys;
+    private int es;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class boss : MonoBehaviour
     {
         if (roll)
         {
-            if (enmys.Length == 0)
+            if (GameObject.FindGameObjectsWithTag("slime").Length == 0 && GameObject.FindGameObjectsWithTag("Ben").Length == 0)
             {
                 attack = 0;
                 roll = false;
@@ -56,10 +57,11 @@ public class boss : MonoBehaviour
             {
                 anim.Play("roar");
                 GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x,0,0), Quaternion.Euler(0, 0, 0));
+                obj1.tag = "Ben";
                 GameObject obj2 = Instantiate(redpotat, new Vector3(transform.position.x -10, 0, 0), Quaternion.Euler(0, 0, 0));
-                enmys = new GameObject[] { obj1, obj2 };
-
+                roll = true;
                 go = true;
+                
             }
         }
         if(attack == 2)
@@ -69,10 +71,14 @@ public class boss : MonoBehaviour
                 anim.Play("attack");
                 GameObject obj1 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 0));
                 obj1.GetComponent<slime>().move = true;
+                obj1.tag = "slime";
                 GameObject obj2 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, 45));
                 obj2.GetComponent<slime>().move = true;
+                obj2.tag = "slime";
                 GameObject obj3 = Instantiate(slime, transform.position, Quaternion.Euler(0, 0, -45));
                 obj3.GetComponent<slime>().move = true;
+                obj3.tag = "slime";
+                roll = true;
                 go = true;
             }
             
