@@ -180,7 +180,7 @@ public class CharacterControll : MonoBehaviour
                 if (CanDash == false)
                 {
                     dashtimer -= Time.deltaTime;
-                    print(dashtimer);
+                    //print(dashtimer);
                 }
                 if (dashtimer <= 0)
                 {
@@ -330,12 +330,13 @@ public class CharacterControll : MonoBehaviour
 
 
             }
-            if(collision.gameObject.tag == "RedPotatoDamage")
+            if (collision.gameObject.tag == "RedPotatoDamage")
             {
+                Debug.Log("*(*(*(*(*(*(*(**(*(*(*(*(*(*(*(**(*(*(*(*(*(*(*(**(*(*(*(*(*(*(*(**(*(*(*(*(*(*(*(**(*(*(*(*(*(*(*(**(*AWDASDASD");
                 currentHP -= currentHP;
             }
         }
-
+        
     }
     public void OnKnock(Vector2 knock)
     {
