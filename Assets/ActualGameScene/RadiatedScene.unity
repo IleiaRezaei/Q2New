@@ -4214,10 +4214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  attack: 0
+  attack: 2
   dead: 0
   attacking: 0
   timer: 0
+  go: 0
+  redpotat: {fileID: 0}
+  greenpotat: {fileID: 0}
+  slime: {fileID: 0}
 --- !u!212 &1189117487
 SpriteRenderer:
   m_ObjectHideFlags: 0
