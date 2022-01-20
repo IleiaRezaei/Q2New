@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class boss : MonoBehaviour
 {
-    public int hp;
+    public int hp = 200;
     public int attack = 0;
     public bool dead;
     public bool attacking;
@@ -53,6 +53,8 @@ public class boss : MonoBehaviour
             {
                 anim.Play("roar");
                 GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x,0,0), Quaternion.Euler(0, 0, 0));
+                Instantiate(redpotat, new Vector3(transform.position.x -10, 0, 0), Quaternion.Euler(0, 0, 0));
+
                 go = true;
             }
         }
@@ -76,10 +78,10 @@ public class boss : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "ThrownObj")
+        if (collision.gameObject.tag == "RedPotatoDamage")
         {
-            int dam = collision.gameObject.GetComponent<ball>().damage;
-            hp -= dam / 2;
+            int dam = 20;
+            hp -= dam;
 
             if (hp <= 0)
             {
