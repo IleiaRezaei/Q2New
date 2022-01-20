@@ -16,6 +16,7 @@ TagManager:
   - RedPotato
   - Ball
   - slime
+  - Ben
   layers:
   - Default
   - TransparentFX
