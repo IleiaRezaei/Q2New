@@ -52,7 +52,7 @@ public class boss : MonoBehaviour
             if (go == false)
             {
                 anim.Play("roar");
-                GameObject obj1 = Instantiate(greenpotat);
+                GameObject obj1 = Instantiate(greenpotat, new Vector3 (transform.position.x,0,0), Quaternion.Euler(0, 0, 0));
                 go = true;
             }
         }
