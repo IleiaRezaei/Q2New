@@ -339,7 +339,7 @@ public class CharacterControll : MonoBehaviour
             {
                 aud.clip = hurt;
                 aud.Play();
-                currentHP -= 10;
+                currentHP -= 25;
                 OnKnock(new Vector2(0,-1) *  5);
             }
         }

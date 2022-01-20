@@ -24,6 +24,7 @@ public class boss : MonoBehaviour
     private AudioSource aud;
     public AudioClip puke;
     public AudioClip yell;
+    public bool hurt;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,8 @@ public class boss : MonoBehaviour
         if(dead == false && on) {
         if (roll)
         {
-            if (GameObject.FindGameObjectsWithTag("slime").Length == 0 && GameObject.FindGameObjectsWithTag("Ben").Length == 0)
+                anim.SetBool("hurt", hurt);
+                if (GameObject.FindGameObjectsWithTag("slime").Length == 0 && GameObject.FindGameObjectsWithTag("Ben").Length == 0)
             {
                 attack = 0;
                 roll = false;
@@ -106,6 +108,8 @@ public class boss : MonoBehaviour
         if (collision.gameObject.tag == "RedPotatoDamage")
         {
             hp -= 40;
+            hurt = true;
+            anim.SetBool("hurt", true);
             anim.Play("hurt");
             if (hp <= 0)
             {
