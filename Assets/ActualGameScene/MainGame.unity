@@ -3567,42 +3567,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 666525704, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_Size.x
-      value: 9.006792
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_Size.y
-      value: 5.51002
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.07363037
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.23983957
-      objectReference: {fileID: 0}
-    - target: {fileID: 666525706, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4338569733345317507, guid: d0d31ae980225ff4c815044a6fb34eb1,
         type: 3}
       propertyPath: m_Name
-      value: RedPotato
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338569733345317507, guid: d0d31ae980225ff4c815044a6fb34eb1,
-        type: 3}
-      propertyPath: m_TagString
       value: RedPotato
       objectReference: {fileID: 0}
     - target: {fileID: 4338569733345317509, guid: d0d31ae980225ff4c815044a6fb34eb1,
@@ -3659,16 +3626,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338569733345317511, guid: d0d31ae980225ff4c815044a6fb34eb1,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.0802064
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338569733345317511, guid: d0d31ae980225ff4c815044a6fb34eb1,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.22928882
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d31ae980225ff4c815044a6fb34eb1, type: 3}
@@ -11589,9 +11546,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4fc16d4bc9de934459c91c481119f5a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b90242677139ae4ba69e0e83d75bba9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.87
   m_Pitch: 1
   Loop: 1
   Mute: 0
