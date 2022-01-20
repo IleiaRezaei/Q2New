@@ -11,6 +11,9 @@ public class ball : MonoBehaviour
     public bool held;
 
     public GameObject me;
+
+    private IEnumerator coroutine;
+
     private void Start()
     {
         Rigidboy = GetComponent<Rigidbody2D>();
@@ -53,7 +56,13 @@ public class ball : MonoBehaviour
         }
         if(collision.gameObject.tag == "RedPotato" || collision.gameObject.tag == "RedPotatoDamage" || collision.gameObject.tag == "Enemy")
         {
+            StartCoroutine(WaitForSeconds());
             Destroy(me);
+        }
+
+        IEnumerator WaitForSeconds()
+        {
+            yield return new WaitForSeconds((int)1.1);
         }
     }
 }
