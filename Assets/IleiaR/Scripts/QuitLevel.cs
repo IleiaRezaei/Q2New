@@ -14,10 +14,13 @@ public class QuitLevel : MonoBehaviour
         pausemenumenu.SetActive(false);
         Time.timeScale = 1;
     }
-
+    
     public void LoadNextScene()
     {
         SceneManager.LoadScene("Start");
+        Time.timeScale = 1;     
+        
+        
     }
 
 }
