@@ -36,7 +36,7 @@ public class PlayerDeath : MonoBehaviour
     }
     public void openplayerDeath()
     {
-        Time.timeScale = 0;
+        
         PlayerDeathScene.SetActive(true);
     }
 }
