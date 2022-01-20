@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class boss : MonoBehaviour
 {
     public int hp = 200;
-    public int attack = 0;
+    public int attack = 1;
     public bool dead;
     public bool attacking;
     private Animator anim;
