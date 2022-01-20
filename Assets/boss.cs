@@ -50,7 +50,7 @@ public class boss : MonoBehaviour
         {
             
             go = false;
-            if(timer >= 5)
+            if(timer >= 2)
             {
                 attack = Random.Range(1,3);
                 timer = 0;
